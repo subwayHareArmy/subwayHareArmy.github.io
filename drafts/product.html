@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Enable bigfoot footnotes -->
+    <!-- <link rel="stylesheet" href="/docs/theme/css/bigfoot-default.css" /> -->
+    <link rel="stylesheet" href="../../../../theme/css/bigfoot-default.css" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Ayush Yembarwar">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title>Product Blog | Ayush Yembarwar</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" title="Ayush Yembarwar blog atom feed" href="/feeds/all.atom.xml" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+    <style>.highlight .hll { background-color: #49483e }
+.highlight  { background: #272822; color: #f8f8f2 }
+.highlight .c { color: #75715e } /* Comment */
+.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .k { color: #66d9ef } /* Keyword */
+.highlight .l { color: #ae81ff } /* Literal */
+.highlight .n { color: #f8f8f2 } /* Name */
+.highlight .o { color: #f92672 } /* Operator */
+.highlight .p { color: #f8f8f2 } /* Punctuation */
+.highlight .ch { color: #75715e } /* Comment.Hashbang */
+.highlight .cm { color: #75715e } /* Comment.Multiline */
+.highlight .cp { color: #75715e } /* Comment.Preproc */
+.highlight .cpf { color: #75715e } /* Comment.PreprocFile */
+.highlight .c1 { color: #75715e } /* Comment.Single */
+.highlight .cs { color: #75715e } /* Comment.Special */
+.highlight .gd { color: #f92672 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gi { color: #a6e22e } /* Generic.Inserted */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #75715e } /* Generic.Subheading */
+.highlight .kc { color: #66d9ef } /* Keyword.Constant */
+.highlight .kd { color: #66d9ef } /* Keyword.Declaration */
+.highlight .kn { color: #f92672 } /* Keyword.Namespace */
+.highlight .kp { color: #66d9ef } /* Keyword.Pseudo */
+.highlight .kr { color: #66d9ef } /* Keyword.Reserved */
+.highlight .kt { color: #66d9ef } /* Keyword.Type */
+.highlight .ld { color: #e6db74 } /* Literal.Date */
+.highlight .m { color: #ae81ff } /* Literal.Number */
+.highlight .s { color: #e6db74 } /* Literal.String */
+.highlight .na { color: #a6e22e } /* Name.Attribute */
+.highlight .nb { color: #f8f8f2 } /* Name.Builtin */
+.highlight .nc { color: #a6e22e } /* Name.Class */
+.highlight .no { color: #66d9ef } /* Name.Constant */
+.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .ni { color: #f8f8f2 } /* Name.Entity */
+.highlight .ne { color: #a6e22e } /* Name.Exception */
+.highlight .nf { color: #a6e22e } /* Name.Function */
+.highlight .nl { color: #f8f8f2 } /* Name.Label */
+.highlight .nn { color: #f8f8f2 } /* Name.Namespace */
+.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .py { color: #f8f8f2 } /* Name.Property */
+.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nv { color: #f8f8f2 } /* Name.Variable */
+.highlight .ow { color: #f92672 } /* Operator.Word */
+.highlight .w { color: #f8f8f2 } /* Text.Whitespace */
+.highlight .mb { color: #ae81ff } /* Literal.Number.Bin */
+.highlight .mf { color: #ae81ff } /* Literal.Number.Float */
+.highlight .mh { color: #ae81ff } /* Literal.Number.Hex */
+.highlight .mi { color: #ae81ff } /* Literal.Number.Integer */
+.highlight .mo { color: #ae81ff } /* Literal.Number.Oct */
+.highlight .sa { color: #e6db74 } /* Literal.String.Affix */
+.highlight .sb { color: #e6db74 } /* Literal.String.Backtick */
+.highlight .sc { color: #e6db74 } /* Literal.String.Char */
+.highlight .dl { color: #e6db74 } /* Literal.String.Delimiter */
+.highlight .sd { color: #e6db74 } /* Literal.String.Doc */
+.highlight .s2 { color: #e6db74 } /* Literal.String.Double */
+.highlight .se { color: #ae81ff } /* Literal.String.Escape */
+.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc */
+.highlight .si { color: #e6db74 } /* Literal.String.Interpol */
+.highlight .sx { color: #e6db74 } /* Literal.String.Other */
+.highlight .sr { color: #e6db74 } /* Literal.String.Regex */
+.highlight .s1 { color: #e6db74 } /* Literal.String.Single */
+.highlight .ss { color: #e6db74 } /* Literal.String.Symbol */
+.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #a6e22e } /* Name.Function.Magic */
+.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class */
+.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
+.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+.highlight .vm { color: #f8f8f2 } /* Name.Variable.Magic */
+.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */</style>
+    <style>.highlight pre, .highlighttable pre {
+  /*note: this is for code block background-color;*/
+    background: #272822;
+    color: #f8f8f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*Added by Ayush Yembarwar for changing the selection color to peach;*/
+::selection{
+  background: #FFCF99!important;
+}
+
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  /*Added by Ayush Yembarwar for changing the selection color to peach;*/
+  color: #E5BA89;
+  text-decoration: none;
+}
+header.main-header {
+  /*background: none repeat scroll 0% 0% #205F29;*/
+  background: none repeat scroll 0% 0% #3377B3;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #3377B3;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  /*color: #205F29;*/
+  color: #3377B3;
+  background: #FFF;
+  /*border: 1px solid #205F29;*/
+  border: 1px solid #3377B3;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  /*background: #3377B3;*/
+  background: #3377B3;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #3377B3;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #3377B3;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #3377B3;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}</style>
+
+    <!-- Begin Mailchimp Style -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px 'Source Sans Pro',Helvetica,Arial,sans-serif; }
+
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<!-- End Mailchimp Style -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+    init_mathjax = function() {
+        if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+    </script>
+
+</head>
+
+<body>
+    <header class="navbar navbar-inverse bs-docs-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="/" title="Home" class="title">Ayush Yembarwar</a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://subwayHareArmy.github.io/pages/about.html" title="About">About</a></li>
+                <!--  -->
+                <li><a href="http://github.com/subwayHareArmy" target="_blank" title="subwayHareArmy's Github" rel="me">Github</a></li>
+                <!--  -->
+                <li><a href="https://subwayHareArmy.github.io/pages/pages.html" title="Pages">Pages</a></li>
+                <li><a href="https://subwayharearmy.github.io/pages/daancorona.html" title="Moonshot">DaanCorona</a></li>
+                <li><a href="/archives.html" title="Archive">Archive</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>Product Blog</h1>
+            <time datetime="article.date.isoformat()" pubdate>Mon 23 September 2019</time>
+        </header>
+
+        <div class="article_content">
+            <!-- PELICAN_BEGIN_SUMMARY -->
+
+<p>Cool Blogs - </p>
+<p>https://firstround.com/review/</p>
+<!-- PELICAN_END_SUMMARY -->
+
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=Well-Designed:+How+to+Use+Empathy+to+Create+Products+People+Love&amp;stick=H4sIAAAAAAAAAG1UPYvUQBi-HK7czd3BmUPQVXA9RESETbL5vMZC7DwEvT44SWZ2k5kkmxnzZWNjZ2XhD7C2sRL8B25pYSNYWAj-A0t3j2QmouXzPg_P-75P3szO6Phgiqe6Di1SwCXJjWtkwfgkQ5MwYgucTvIiC58HfAKzLFkp-xtxE1az1EjMlQKmdKrZTp661krZ3QDI_NrsdK3Bm5Lq-UrpejTLAFp1IrCtoZoYbic3ILVqzysFTGlQ57pkKaSt1jctncaxe6eAabZpICy1SZBAKp00L6kdodZrWsdGKmgWckKY3C6dz-auUFsGspy0kHTSaikXS1RNHjPd7fY3idFUg4VL5viNwF3IPcY5dVPshAOv1ER2PMBcmy19MWhReGkQ9BFQ38d0oKUYtZ7sHUMfYuE919qgWDoyE6ct2hzKxGqNQlMGas85nheCzqFRl7ow04mD9FnRT5LobuuLzs7S5V4gE2pKlyJXxk2hpqX-gPZI5ViSbhmv-CD-uNCQyBR7xCINYgIbZqIVIZM5oNJseDw4DbOusd-NGuilNxMfBOP1WiiO-95mHCYUyYwoaoPQGtyrPXc8_Yfydnvv8Nfv70fj19tv3n_-qrzaBoePsoxFpHkSkWc8Cs8y9Ra4-DDlC96oY7A_3tl0N4KK3tkaAyCQup5r72nEz7LTLFygRv2kqB-V_7jdFm7XwcH4_Nb0uMJobbcHJFRf_G1H1BjsnkYURgV7jNQTAB5khEQBX2Speg9cHl-aBqIw3fzkbO14BP4tH980bnz5-e3D6Cq4sCncvbgzOlSuKNbW1sv7J-el_Xejo_696J6PTfkPQLwl3WUEAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIbzAw</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=Emotional+Design&amp;stick=H4sIAAAAAAAAAG1Uv2_TQBitK1K111YqripBQCJUCCGEFNuxY7sLA2KjQoLuFnf2ObHvzo7v8C8WFjYmBv4AZhYmJP4DMjKwIDEwIPEfMJJEyZ0RjO97z-<em>7vnfn2-2d7g3p0LCJ1VTWNTLlYpDhQRjxacwGeZGFz5EYwCxL59rBMB6aTViNmJXacw0svxu7OfOcubYygTyo7bWutURTUjOfa4dLaMJmhqBTpxKPDVwTy1vLLUid2vdLCRlFdW4qlkLaGpumpdu4440T4sbYtnCstClKIVVOhp_WrlSbNa0Ti0mah4IQrrZjk9HEk2rHwo7LCkWnrcGEXKJq8oSb3nr_VYidhUvuBo3EDingjMhA4px6LHbDjhez8TjpYGGMZoEctCh8htAmAhoEMe1oaYxbX_VOYABj6T0xWlTMXJWJ2xZtDlVitUGhrQIdT0Q8KSSdQ6suTWlmEhebo2IzSWp6bSA7uzNP-Egl1JQexZ6Km0LDYEGH9knlOopuuahEJ_6kMLDMNPaJQxrMJbbs1ChCrnLApd2IpHM17LqOg_WoyCz9kTyQOF6shZNk09tOwpRilRHFLQqdzn0dT1zf_KG93d4</em>-vX7-3H_9fab95-_aq-2wdGjLOMRaZ5E5JmIwotMvwV2HjIxFY3eBwf93WV3C1X0zlYfAIn0xVz7TyNxkZ1n4RQ3-idN_6j9x-22dLsODvuru2YmVYwXdvtAQf3F33ZET8DeeURhVPDHWD8D4EFGSITENGP6PXDSvzxEsjBc_uR84XgM_i2f3rRufPn57UPvKri0LNzd2e0daVc0Z2vr5f2zVengXe94816sn49l-Q-XUWvxYQQAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIaTAu</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=Design+for+human+scale+Victor+Papanek&amp;stick=H4sIAAAAAAAAAG1Uv4_TMBi9nOjpzncnHamQoCBRTgghhNQkTZrkFgbExgkJbo-wE6dNbCeNTX6xsLAxMfAHMLMwIfEf0JGBBYmBAYn_gJH2aO0gGN_3Xt73fc-Od3vHYERHxoQGQUytq2TGxTDDwzDis5gN8yILnyExhFmWLrSDUTwym7AaMyu1F9qfD92cec5C21sByIPaXutaSzQlNfOFdriCJmzmCDp1KvHEwDWxvLXcgtSpfb-UkFFU56ZiKaStsWlauo072TghbkxsC8dKm6IUUuVk-GntSrVZ0zqxmKR5KAjhajs2HU89qXYs7LisUHTaGkzIJaomT7jprfe3idVUnYVL7gaNxA4p4JzIQOKceix2w44Xs_Ek6WBhjOeBHLQofIbQJoLzA-toaYxbX_VOYABj6T01WlTMXZWJ2xZtDlVitUGhrQKdTEU8LSSdQ6suTWlmEheb42IzSWp6bSA7u3NP-Egl1JQexZ6Km0LDYEGH9knlOopuuahEJ_6kMLDMNPaJQxrMJbbs1ChCrnLApd2IpHM17LqOg_WoyCz9sTyQOF6uhZNk09tOwpRilRHFLQqdzn2dTF3f_K692d4_-vnrW3_wavv1u09ftJfb4OhhlvGINI8j8lRE4Vmm3wQ7D5iYiUYfgIPB7qq7hSp6e2sAgET6cq79J5E4y06zcIYb_aOmf9D-43ZLul0Dh4Pzu2YmVYyXdvtAQf3533ZET8DeaURhVPBHWD8B4H5GSITELGP6XXBpcHGEZGG0-sn50rEP_i0f37Cuf_7x9X3vCriwKtzZ2e0daZc1Z2vrxb2T89LB215_816sn49V-TeelXeAYgQAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIfjA1</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=INSPIRED:+How+to+Create+Tech+Products+Customers+Love&amp;stick=H4sIAAAAAAAAAG1Uu47TQBRdr8hqd3ZXWhwhQUAirBBCCCm2Y8f2NhSIjhUSbG8xY88k9ozteAa_aGjoqCj4AGoaKiT-gJQUNEgUFEj8ASXJkswYQXnuOTr33jOP3d7xwYiMTAsWhZ8iZF2lMy6GGR6GEZ-RdJgXWfgMiSHMsmShnWubsBqnVmIvNDBiI2Pi5qnnLLS9FYA8qO21rrVEUzIzX2iHK2jCZo6gUycSTwxcU8tbyy3InNr3SwlThurcVCyDrDU2TUu3cScbJ8SNiW1horQJSiBTToaf1K5UmzWrYyuVNA8FpVxtl07HU0-qHQs7blooOmmNVMglqiaPuemt97ep1VSdhUvuBo3EDi3gnMpASM68lLhhxyu18STuYGGM54Ec9M8ZbSJgQUBYR8sIbn3VO4YBJNJ7arSomLsqE7ct2hyqxGqDQVsFOpkKMi0knUOrLk1pZlIXm-NiM0liem0gO7tzT_hIJdSUHsOeiptBw0iDDu3TynUU3XJRiU78cWFgmSnxqUMbzCW27MQoQq5ywKXdiLhzNey6JsF6VGSW_lgeCCHLtXAcb3rbcZgwrDJiuEWh07mvk6nrm9-1N9v7Rz9_fesPXm2_fvfpi_ZyGxw9zDIe0eZxRJ-KKDzL9Jtg50EqZqLRB-BgsLvqbqGK3d4aACCRvpxr_0kkzrLTLJzhRv-o6R-0_7jdkm7XwOHg_K6ZcUXw0m4fKKg__9uO6jHYO40YjAr-COsnANzPKI2QmGWpfhdcGlwcIVkYrR45Xzr2wb_l4xvW9c8_vr7vXQEXVoU7O7u9I-2y5mxtvbh3cl46eNvrb_6L9fexKv8G3Zx4qGQEAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIezA0</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;q=beautiful+evidence</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=Hooked:+How+to+Build+Habit-Forming+Products&amp;stick=H4sIAAAAAAAAAG1UPYvUQBi-HK7czd3BmUPQVXA9RESETbL5vMZC7DwEvT44SWZ2k5lJNjPmy8bGzsrCH2BtYyX4D9zSwkawsBD8B5buHrszES2f93l43vd98mZ2Bsf7Yzw2O0u0FTUL6xqZcTHK0ShO-AyzUVHm8fNIjGCeZwvtXNvG9YRZmb3QwJiODdcrmO8stN0VgDxs7LVu47nQDlbQhO08gk6TSewaqCGWv5ZbkDpNEFQSMho1halYCmlnbJpWXuu5G6eIG65tIay0WZRBqpyMIGs8qTYb2qQWkzSPBSFcbcemk6kv1Y6FHI-Vis46gwm5RN0WKTf99f42sdq6t3DFvbCV2CElnBMZCC6oz7AX97yYjdy0h4UxmYdy0LIMWBRtIqBhiGlPSzHqAtU7hSHE0ntqdFE591QmXld2BVSJNQaFtgrUnQo8LSVdQKupTGlmEg-Zk3IzSWb6XSg7e3NfBJFKqK18inwVN4WGwcIeHZDacxTdcVGLXvxpaSCZKQ6IQ1rEJbbszChjrnJAld2KtHcadtPgcD1qZFbBRH4QjJdroTTd9LbTOKNIZURRF8VO717dqReYP7S323uHv35_Pxq-3n7z_vNX7dU2OHyU5zwh7ZOEPBNJfJbrt8DFh0zMRKsPwf5wZ9Xdimp6Z2sIgET6cq69p4k4y0_zeIZa_ZOmf9T-43Zbul0HB8PzWzPTGqOl3R5QUH_xtx3RU7B7mlCYlPwx0k8AeJATkkRiljP9Hrg8vDSOZGG8-sn50vEI_Fs-vmnd-PLz24fBVXBhVbh7cWdwqF3RnK2tl_dPzkv77wZHm_di_Xysyn8Ar8YbeWQEAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIOTAe</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=Product+Leadership:+How+Top+Product+Managers+Launch+Awesome+Products+and+Build+Successful+Teams&amp;stick=H4sIAAAAAAAAAG1Uu27UQBSNIzZKJokUvEKCBYklQgghpLW9fqahQHRESJDeYmyPd-2Zsdcz-EVDQ0dFwQdQ01Ah8QdsSUGDREGBxB9QshvWM0ZQnnuOzr33-Hp2B8eHk3ii6wHTbNNAsXEVzxkfZ2gcRmwe03FeZOGzgI9hlqVL5WAtbsJqSo3UXCpgQiaa7eTUtZbK3hpA5tfmRtcavCmJni-VPz1gswigVacC2xqqseFu5AYkVu15pYCUBHWuS5ZA0mpd09JpHLtz6qaX2jRIIZFOmpfWjlDrNakTgwqahRxjJrejs-nMFWrLQJZDC0mnrUa5WKJq8oTp7mZ_ExtN1Vu4ZI7fCGzhAi6wCCTOiUtjJ-x5URPZSQ9zbbrwxaBF4dEg6CIgvh-TnpbEqPVk7wT6MBbeM60NioUjM3Haos2hTKzWCDRloPaMx7NC0Dk06lIXZjp2kD4tuklS3W190dlZuNwLZEJN6RLkyrgJ1DTq92gPV44l6ZbxivfiTwoNiUxjD1u4QUxgw0y1ImQyB1SaDU96p2HWdexvRg300puKDxLHq7VQknS9zSRMCZIZEdQGodW7V3vmePp35c32_tHPX9-Go1fbr999-qK83AZHD7OMRbh5HOGnPArPMvUm2HlA-Zw36ggcjHbX3Y2gIre3RgAIpK7m2n8S8bPsNAvnqFE_KuoH5T9ut4TbNXA4Or81PalitLLbBxKqz_-2w2oC9k4jAqOCPULqCQD3M4yjgM8zqt4Fl0YXJ4EoTNY_OVs5DsG_5eMbxvXPP76-H1wBF9aFOzu7gyPlsmJtbb24d3JeOng7GHbvxeb5WJd_A8ceMK1lBAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYITjAl</p>
+<p>https://www.google.com/search?client=firefox-b-d&amp;sxsrf=ACYBGNRs1PVP6B0laUXn91aVXYZu6Zq4qA:1568998126001&amp;q=The+Industrial+Design+Reader&amp;stick=H4sIAAAAAAAAAG1UPY_TQBQ8n8jpbu9OOhwhQUAinBBCCCm2Y8f2NRSIjhMSXG-xa-8m9q7teBd_0dDQUVHwA6hpqJD4B6SkoEGioEDiH1CSHMmuEZTz3mjem_Hz7vaOD0ZkZFqQh4JSbl2lMy6GGR6GEZ-RdJgXWfgMiSHMsmShnXObsBqnVmIvNDBiI2Pi5qnnLLS9FYA8qO01r7VEUzIzX2iHK2jCZo6gUycSTwxcU8tb0y3InNr3SwlThurcVF0GWWtshpZu4042SogbE9vCRHETlECmlAw_qV3JNmtWx1Yq23-sK3fpdDz1JNuxsOOmhWonrZEKaaJq8pib3tq_Ta2m6hguuRs0Eju0gHMqAyE581Lihh2t1MaTuIOFMZ4HctGi8FOENhGwICCsw2UEt76aHcMAEqk9NVpUzF2VidsWbQ5VYrXBoK0CnUwFmRaynUOrLk0pZlIXm-Nis0liem0gJ7tzT_hIJdSUHsOeiptBw0iDTtunleuodstFJTrxx4WBZabEpw5tMJfYshOjCLnKAZd2I-LOadh1TYL1qsgs_bH8IIQsbeE43sy24zBhWGXEcItCp3Ovk6nrm9-1N9v7Rz9_fesPXm2_fvfpi_ZyGxw9zDIe0eZxRJ-KKDzL9Jtg50EqZqLRB-BgsLuabqGK3d4aACCRvtxr_0kkzrLTLJzhRv-o6R-0_6jdkmrXwOHg_NbMuCJ4KbcPFNSf_y1H9RjsnUYMRgV_hPUTAO5nlEZIzLJUvwsuDS6OkCyMVj85Xyr2wb_l4xvW9c8_vr7vXQEXVoU7O7u9I-2y5mxtvbh3cl46eNvrb96L9fOxKv8GjH-AsGQEAAA&amp;sa=X&amp;ved=0ahUKEwjZjtC_7d_kAhXCTX0KHXvdDMMQ-BYIWjAp</p>
+<p>https://medium.com/@aakashkhatter1296/norman-doors-to-push-or-to-pull-d8dd633722e5</p>
+        </div>
+
+        <div class="meta">
+            <div>
+                <a href="../taaaag/ajinkya-vyas/" class="tag">ajinkya vyas</a>
+                <a href="../taaaag/product/" class="tag">product</a>
+            </div>
+        </div>
+    </article>
+
+    <div class="container">
+        <!-- Begin MailChimp Signup Form -->
+
+        <div id="mc_embed_signup">
+            <form action="https://matthewkudija.us12.list-manage.com/subscribe/post?u=55dc59a5176654a0fed6d8145&amp;id=74322d0c56" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_55dc59a5176654a0fed6d8145_74322d0c56" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        
+        <!--End mc_embed_signup-->
+    </div>
+
+    <p>&copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> <a href=https://subwayHareArmy.github.io target="_blank">Ayush Yembarwar</a> | <a href="https://github.com/subwayHareArmy/subwayHareArmy.github.io" target="_blank">Source</a></p>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+    background-color: #272822;
+}
+
+table.dataframe {
+    font-family: Courier, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>
+
+</div>
+
+<!-- <section id="footer">
+    <div class="container">
+        <p>
+            &copy; 2005<script>new Date().getFullYear()>2005&&document.write("-"+new Date().getFullYear());</script> <a href=https://subwayHareArmy.github.io target="_blank">Ayush Yembarwar</a>
+        </p>
+        <p>
+            <a href="https://github.com/mkudija/blog" target="_blank">Source</a> | Built with <a href= "http://docs.getpelican.com/">Pelican</a> and <a href= "https://pages.github.com/">GitHub Pages</a>.
+        </p>   
+    </div>
+</section>
+ -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-121240916-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-121240916-1');
+    ga('send', 'pageview');
+</script>
+<!-- <script type="text/javascript" src="/docs/theme/js/bigfoot.js"></script> -->
+<script type="text/javascript" src="../../../../theme/js/bigfoot.js"></script>
+<script type="text/javascript">
+    $.bigfoot (
+    {
+
+    }
+    );
+</script>
+</body>
+</html>

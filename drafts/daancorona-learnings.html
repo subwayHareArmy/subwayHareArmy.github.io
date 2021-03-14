@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Enable bigfoot footnotes -->
+    <!-- <link rel="stylesheet" href="/docs/theme/css/bigfoot-default.css" /> -->
+    <link rel="stylesheet" href="../../../../theme/css/bigfoot-default.css" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Ayush Yembarwar">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title>DaanCorona Learnings <working title> | Ayush Yembarwar</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" title="Ayush Yembarwar blog atom feed" href="/feeds/all.atom.xml" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+    <style>.highlight .hll { background-color: #49483e }
+.highlight  { background: #272822; color: #f8f8f2 }
+.highlight .c { color: #75715e } /* Comment */
+.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .k { color: #66d9ef } /* Keyword */
+.highlight .l { color: #ae81ff } /* Literal */
+.highlight .n { color: #f8f8f2 } /* Name */
+.highlight .o { color: #f92672 } /* Operator */
+.highlight .p { color: #f8f8f2 } /* Punctuation */
+.highlight .ch { color: #75715e } /* Comment.Hashbang */
+.highlight .cm { color: #75715e } /* Comment.Multiline */
+.highlight .cp { color: #75715e } /* Comment.Preproc */
+.highlight .cpf { color: #75715e } /* Comment.PreprocFile */
+.highlight .c1 { color: #75715e } /* Comment.Single */
+.highlight .cs { color: #75715e } /* Comment.Special */
+.highlight .gd { color: #f92672 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gi { color: #a6e22e } /* Generic.Inserted */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #75715e } /* Generic.Subheading */
+.highlight .kc { color: #66d9ef } /* Keyword.Constant */
+.highlight .kd { color: #66d9ef } /* Keyword.Declaration */
+.highlight .kn { color: #f92672 } /* Keyword.Namespace */
+.highlight .kp { color: #66d9ef } /* Keyword.Pseudo */
+.highlight .kr { color: #66d9ef } /* Keyword.Reserved */
+.highlight .kt { color: #66d9ef } /* Keyword.Type */
+.highlight .ld { color: #e6db74 } /* Literal.Date */
+.highlight .m { color: #ae81ff } /* Literal.Number */
+.highlight .s { color: #e6db74 } /* Literal.String */
+.highlight .na { color: #a6e22e } /* Name.Attribute */
+.highlight .nb { color: #f8f8f2 } /* Name.Builtin */
+.highlight .nc { color: #a6e22e } /* Name.Class */
+.highlight .no { color: #66d9ef } /* Name.Constant */
+.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .ni { color: #f8f8f2 } /* Name.Entity */
+.highlight .ne { color: #a6e22e } /* Name.Exception */
+.highlight .nf { color: #a6e22e } /* Name.Function */
+.highlight .nl { color: #f8f8f2 } /* Name.Label */
+.highlight .nn { color: #f8f8f2 } /* Name.Namespace */
+.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .py { color: #f8f8f2 } /* Name.Property */
+.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nv { color: #f8f8f2 } /* Name.Variable */
+.highlight .ow { color: #f92672 } /* Operator.Word */
+.highlight .w { color: #f8f8f2 } /* Text.Whitespace */
+.highlight .mb { color: #ae81ff } /* Literal.Number.Bin */
+.highlight .mf { color: #ae81ff } /* Literal.Number.Float */
+.highlight .mh { color: #ae81ff } /* Literal.Number.Hex */
+.highlight .mi { color: #ae81ff } /* Literal.Number.Integer */
+.highlight .mo { color: #ae81ff } /* Literal.Number.Oct */
+.highlight .sa { color: #e6db74 } /* Literal.String.Affix */
+.highlight .sb { color: #e6db74 } /* Literal.String.Backtick */
+.highlight .sc { color: #e6db74 } /* Literal.String.Char */
+.highlight .dl { color: #e6db74 } /* Literal.String.Delimiter */
+.highlight .sd { color: #e6db74 } /* Literal.String.Doc */
+.highlight .s2 { color: #e6db74 } /* Literal.String.Double */
+.highlight .se { color: #ae81ff } /* Literal.String.Escape */
+.highlight .sh { color: #e6db74 } /* Literal.String.Heredoc */
+.highlight .si { color: #e6db74 } /* Literal.String.Interpol */
+.highlight .sx { color: #e6db74 } /* Literal.String.Other */
+.highlight .sr { color: #e6db74 } /* Literal.String.Regex */
+.highlight .s1 { color: #e6db74 } /* Literal.String.Single */
+.highlight .ss { color: #e6db74 } /* Literal.String.Symbol */
+.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #a6e22e } /* Name.Function.Magic */
+.highlight .vc { color: #f8f8f2 } /* Name.Variable.Class */
+.highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
+.highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+.highlight .vm { color: #f8f8f2 } /* Name.Variable.Magic */
+.highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */</style>
+    <style>.highlight pre, .highlighttable pre {
+  /*note: this is for code block background-color;*/
+    background: #272822;
+    color: #f8f8f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*Added by Ayush Yembarwar for changing the selection color to peach;*/
+::selection{
+  background: #FFCF99!important;
+}
+
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  /*Added by Ayush Yembarwar for changing the selection color to peach;*/
+  color: #E5BA89;
+  text-decoration: none;
+}
+header.main-header {
+  /*background: none repeat scroll 0% 0% #205F29;*/
+  background: none repeat scroll 0% 0% #3377B3;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #3377B3;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  /*color: #205F29;*/
+  color: #3377B3;
+  background: #FFF;
+  /*border: 1px solid #205F29;*/
+  border: 1px solid #3377B3;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  /*background: #3377B3;*/
+  background: #3377B3;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #3377B3;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #3377B3;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #3377B3;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}</style>
+
+    <!-- Begin Mailchimp Style -->
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px 'Source Sans Pro',Helvetica,Arial,sans-serif; }
+
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<!-- End Mailchimp Style -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+    init_mathjax = function() {
+        if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+    </script>
+
+</head>
+
+<body>
+    <header class="navbar navbar-inverse bs-docs-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="/" title="Home" class="title">Ayush Yembarwar</a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://subwayHareArmy.github.io/pages/about.html" title="About">About</a></li>
+                <!--  -->
+                <li><a href="http://github.com/subwayHareArmy" target="_blank" title="subwayHareArmy's Github" rel="me">Github</a></li>
+                <!--  -->
+                <li><a href="https://subwayHareArmy.github.io/pages/pages.html" title="Pages">Pages</a></li>
+                <li><a href="https://subwayharearmy.github.io/pages/daancorona.html" title="Moonshot">DaanCorona</a></li>
+                <li><a href="/archives.html" title="Archive">Archive</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>DaanCorona Learnings <working title></h1>
+            <time datetime="article.date.isoformat()" pubdate>Tue 12 May 2020</time>
+        </header>
+
+        <div class="article_content">
+            <!-- PELICAN_BEGIN_SUMMARY -->
+
+<p><img alt src="../images/DaanCorona/DAANCORONA_LOGO.png">  <br></p>
+<p><strong>DaanCorona</strong> is an online platform for <strong>selling vouchers for India's largely undigitized</strong> small and medium <strong>businesses</strong>. You can find it here - <a href="https://daancorona.tech">https://daancorona.tech</a></p>
+<p>We built DaanCorona during the COVID-19 lockdown. In these efforts, my role was most similar to one of a <strong>co-lead</strong> (one of two) and a <strong>PM</strong> (Product Manager).   </p>
+<!-- I wore many hats, while at DaanCorona, often at the same time. I don't think it translated well, all the time. -->
+
+<!-- PELICAN_END_SUMMARY -->
+
+<p>Here's an <a href="https://epcbits.wordpress.com/2020/05/23/daancorona-tech/">interview</a> we did with the English Press Club at BITS Pilani. Here's <a href="https://online.fliphtml5.com/hfdbv/vrzd/#p=9">another</a> with the Alumni Relations Cell.  </p>
+<p>I already wrote an explanatory post regarding this social initiative, <a href="{filename}../../pages/daancorona.html">here</a>.  </p>
+<p>This post, however, shall be about some learnings. Take them with a grain of salt.  </p>
+<p><br></p>
+<h1 id="payment-split">Payment split</h1>
+<p>We accepted payments using the Razorpay payments gateway. While this added a small overhead with the transaction fees, DaanCorona operates on goodwil and hence expecting the customers to cover it wasn't a problem.  </p>
+<p>Splitting the transactions-related data can uncover some insights. While I have little data to make these claims, one can surely use these for giving direction for the next project's design decisions.   </p>
+<h2 id="by-mode-of-payment">By mode of Payment:</h2>
+<p>Here's our revenue split according to payment modes (by volume).<br>
+<!-- INSERT SAKEY DIAGRAM HERE -->  </p>
+<style>#chartdiv{width:100%;height:600px}</style>
+
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<script>/*<![CDATA[*/am4core.ready(function(){am4core.useTheme(am4themes_animated);var c=am4core.create("chartdiv",am4charts.SankeyDiagram);c.data=[{from:"Cash in the U.S.",color:"#f47b20"},{from:"Cash Overseas",color:"#000000"},{from:"Source",to:"Total non financial companies",value:100,color:"#f47b20",labelText:"[font-size:1.5em]Revenue\nsplitup\n\nBy mode of payment\n\n[/]Total Volume (%) \n [bold]100%[/b]",zIndex:100},{from:"Total non financial companies",to:"UPI",value:76.08,color:"#f47b20"},{from:"Total non financial companies",to:"Card Payments",value:16.29,color:"#f47b20",labelText:"Cards\n [bold]16.29%[/]"},{from:"Total non financial companies",to:"Net Banking",value:7.63,color:"#f47b20"},{from:"UPI",to:"UPI_2",value:76.08,color:"#f47b20",labelText:"UPI\n [bold]76.08%[/]"},{from:"Card Payments",to:"Debit Card",value:11.199,color:"#f47b20",labelText:"Debit Cards [bold]11.2%[/]"},{from:"Card Payments",to:"Credit Card",value:5.091,color:"#f47b20",labelText:"Credit Cards [bold]5.09%[/]"},{from:"Net Banking",to:"Net Banking_2",value:7.63,color:"#f47b20",labelText:"Net Banking [bold]7.63%[/]"}];c.paddingRight=30;c.paddingTop=80;c.paddingBottom=80;c.nodeAlign="bottom";c.minNodeSize=0.001;c.dataFields.fromName="from";c.dataFields.toName="to";c.dataFields.value="value";c.dataFields.color="color";var b=c.links.template;b.colorMode="gradient";b.fillOpacity=1;b.strokeOpacity=1;b.cursorOverStyle=am4core.MouseCursorStyle.pointer;b.readerTitle="drag me!";b.showSystemTooltip=true;b.tooltipText="";b.propertyFields.zIndex="zIndex";b.tension=0.6;c.nodes.template.width=0;c.nodes.template.nameLabel.disabled=true;c.nodes.template.draggable=true;c.nodes.template.inert=true;c.nodes.template.togglable=false;b.events.on("down",function(i){var j=i.target.dataItem.fromNode;var g=i.target.dataItem.toNode;var h=am4core.math.getDistance(i.pointer.point,{x:j.pixelX,y:j.pixelY});var k=Infinity;if(g){k=am4core.math.getDistance(i.pointer.point,{x:g.pixelX,y:g.pixelY})}if(h<k){j.dragStart(i.pointer)}else{g.dragStart(i.pointer)}});var f=c.links.template.bullets.push(new am4charts.LabelBullet());f.label.propertyFields.text="labelText";f.propertyFields.locationX="labelLocation";f.propertyFields.rotation="labelRotation";f.label.horizontalCenter="left";f.label.textAlign="start";f.label.dx=-50;var a=c.links.template.bullets.push(new am4charts.LabelBullet());a.label.text="${value}";a.label.fill=am4core.color("#ffffff");a.label.isMeasured=false;a.isMeasured=false;c.events.on("inited",function(){for(var h=0;h<c.links.length;h++){var j=c.links.getIndex(h);var g=j.bullets.getIndex(1);g.opacity=0;if(j.dataItem.toNode&&j.dataItem.value>10){g.label.fontSize=j.dataItem.value/10;e(g)}else{j.bullets.removeValue(g)}}});function e(g){var i=6000*Math.random()+3000;var h=g.animate([{property:"locationX",from:0.2,to:0.5},{property:"opacity",from:0,to:0.3}],i);h.events.on("animationended",function(j){d(j.target.object,i)})}function d(g,i){var h=g.animate([{property:"locationX",from:0.5,to:0.8},{property:"opacity",from:0.3,to:0}],i);h.events.on("animationended",function(j){setTimeout(function(){e(j.target.object)},Math.random()*5000)})}});/*]]>*/</script>
+
+<div id="chartdiv"></div>
+
+<!-- INSERT SAKEY DIAGRAM HERE -->
+
+<p>Despite having very little data, UPI payments clearly take the cake here. It accounts for more than 75% of the payment volume. Although UPI being a majority was expected, A 3/4 share was surprising. Knowing our largest customer demographic - young adults in the 17 to 25 year age bracket - I would attribute UPI as their payment method of choice.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> When targeting the young adult demographic, side with a payment gateway that supports UPI payment.   </p>
+</blockquote>
+<p>The split for payment modes (by number of transactions) offers very similar percentages.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> Does this mean people are comfortable making both, small and large payments through the each payment method? Have very little data.
+<br></p>
+</blockquote>
+<h2 id="by-traffic">By Traffic:</h2>
+<p>Our platform is composed of a consumer-facing website and a business-facing app. Vouchers are bought throught the website. The website traffic is split according to the mode of access.</p>
+<p>Here's our revenue split according to access modes (by volume).<br>
+<!-- INSERT SAKEY DIAGRAM HERE -->  </p>
+<style>#chartdiv_2{width:100%;height:600px}</style>
+
+<script>/*<![CDATA[*/am4core.ready(function(){am4core.useTheme(am4themes_animated);var a=am4core.create("chartdiv_2",am4charts.SankeyDiagram);a.data=[{from:"Source",to:"Total Sales",value:100,color:"#f47b20",labelText:"[font-size:1.5em]Revenue\nsplitup\n\nBy mode of access\n\n[/]Total Volume (%) \n [bold]100%[/b]",zIndex:100},{from:"Total Sales",to:"Mobile Web",value:63.87,color:"#f47b20",labelText:"Mobile Web Users\n [bold]64%[/]"},{from:"Total Sales",to:"Desktop",value:36.13,color:"#f47b20",labelText:"Desktop Users\n [bold]36%[/]"}];a.paddingRight=30;a.paddingTop=80;a.paddingBottom=80;a.nodeAlign="bottom";a.minNodeSize=0.001;a.dataFields.fromName="from";a.dataFields.toName="to";a.dataFields.value="value";a.dataFields.color="color";var b=a.links.template;b.colorMode="gradient";b.fillOpacity=1;b.strokeOpacity=1;b.cursorOverStyle=am4core.MouseCursorStyle.pointer;b.readerTitle="drag me!";b.showSystemTooltip=true;b.tooltipText="";b.propertyFields.zIndex="zIndex";b.tension=0.6;a.nodes.template.width=0;a.nodes.template.nameLabel.disabled=true;a.nodes.template.draggable=true;a.nodes.template.inert=true;a.nodes.template.togglable=false;b.events.on("down",function(f){var g=f.target.dataItem.fromNode;var d=f.target.dataItem.toNode;var e=am4core.math.getDistance(f.pointer.point,{x:g.pixelX,y:g.pixelY});var h=Infinity;if(d){h=am4core.math.getDistance(f.pointer.point,{x:d.pixelX,y:d.pixelY})}if(e<h){g.dragStart(f.pointer)}else{d.dragStart(f.pointer)}});var c=a.links.template.bullets.push(new am4charts.LabelBullet());c.label.propertyFields.text="labelText";c.propertyFields.locationX="labelLocation";c.propertyFields.rotation="labelRotation";c.label.horizontalCenter="left";c.label.textAlign="start";c.label.dx=-50});/*]]>*/</script>
+
+<div id="chartdiv_2"></div>
+
+<!-- INSERT SAKEY DIAGRAM HERE -->
+
+<p>A majority of the transactions have users accessing the mobile web version of the website. Data from Google Analytics also backs this claim - a majority of our users are mobile users.</p>
+<blockquote>
+<p><strong>Takeaway:</strong> Designing mobile first or responsive websites is a necessity. Especially if the primary distribution channel is mobile-based (Instagram, WhatsApp, etc.).   </p>
+</blockquote>
+<p>WhatsApp was the marketing channel that really worked for us (more on this later), so having a responsive website was a no-brainer.    </p>
+<p><br></p>
+<h1 id="designing-for-the-stakeholders">Designing for the stakeholders</h1>
+<p>At some points in the design process, we were stuck because we had many options to choose from. One such situation was when we were deciding on the mechanic for by which customer would redeem vouchers.    <br>
+We brainstorming a couple of ideas but the team was divided over them. Eventually, I came up with arguments supporting a particular option and the team seeing truth in it, agreed as well. However, this pickle would've been avoided had we used our stakeholder analysis to give our brainstorming some direction. We wouldn't have ended up with the extra options in the first place. </p>
+<blockquote>
+<p><strong>Takeaway:</strong> Every new insight / analysis needs to be brought to the foreground and discussed, otherwise it's wasted on you.</p>
+</blockquote>
+<p>Taking a step back helped us decide on the redeeming mechanic. DaanCorona's group of target businesses were undigitized, local micro and small businesses. We'd spoken to owners of such businesses during the idea validation phase and even before. We knew the kind of phones and apps they used, comfort levels with technology, their concerns and reservations. Most were scared of technology and learning to use new apps was a stressful undertaking. The customers who would buy our vouchers were however a digitally literate, tech-savvy bunch.      <br>
+Designing the product around these considerations was a guiding design principle for the DaanCorona platform. Keeping this in mind, we could take a decision on the voucher redeeming mechanic. We decided to go with a 'user-initiates-the redeeming-request' model. This would ensure minimum effort from the business owner's side.       </p>
+<blockquote>
+<p><strong>Takeaway:</strong> User research in really useful if used to design around the user's constraints.   </p>
+</blockquote>
+<p>We even tried to stick to the designs of e-wallets that they used often. The intention was to make DaanCorona seem familiar and non-intimidating, while ensuring that concepts and knowledge from using e-wallets transferred well. From our interacting with the business owners, this seemed to have worked well.        <br>
+<br><br>
+A Gantt chart mapping the workflow:</p>
+<p><img alt src="../images/DaanCorona/gantt_3.png">     </p>
+<blockquote>
+<p><strong>Note:</strong> Observe, very few processes depend on the business's participation (coloured blue). This is <strong>intentional</strong> since we're targeting a group that isn't very tech-savvy; owners of un-digitized local businesses.
+<br>  </p>
+</blockquote>
+<h1 id="long-term-plans-and-vision">Long term plans and 'vision'</h1>
+<p>I always considered 'vision' to be a set of lofty and ambiguous ideals, a buzzword which is given undue importance. I never really understood its use. <br>
+Yet, going through our vision again, made quick work of a few problems we were struggling with. I realized that the vision is like a codified version of the product's priorities and other guidelines, it helps keep things in perspective. I'm a believer now.  </p>
+<blockquote>
+<p>The vision should alse be seen as an asset used for problem solving.  </p>
+</blockquote>
+<p>We turned to the product vision and found answers for questions like "Are advertisements featuring just a few businesses, okay?". 
+<br>  </p>
+<h1 id="building-trust">Building Trust</h1>
+<p>A <a href="https://www.funraise.org/giving-report/past-reports">study</a> <sup>1</sup> reports that one reason why people are reluctant to donate money is that they <strong>don’t trust charity organizations</strong> to spend their money well. Our entire product rests upon the ideal that it is a better alternative to donations, so we had to address this issue.  </p>
+<p>Businesses without an existing online presence often don't do well on online platforms, primarily due to a lack of trust from customers.  </p>
+<p><br></p>
+<p>We mean for DaanCorona to be an intermediary between the customers buying vouchers and businesses selling them. Just the act of being an intermediary, we expect, will introduce trust and accountability into the equation. Ben Thompson, while writing about Airbnb, wrote something similar. According to him, 
+Apart from this, we signed MoU's (Memorandums of Understanding) with every partner business, customizing it programatically to be specific for each business. </p>
+<blockquote>
+<p>Even if the MoU has no teeth, just having a legal document in the picture will do two things<br>
+-&gt; Builds trust with customers<br>
+-&gt; Convinces businesses owners that everything is legit</p>
+</blockquote>
+<p>I am not endorsing fooling people, just pointing out that such actions positively affect the trust in the product.   </p>
+<p>Through the MoU, we transfers the responsibility of honouring vouchers onto the business itself. DaanCorona simply acts as an intermediary and limits its liability. Even so, surprisingly, a majority of our customers do not find it very difficult to trust us or our partner businesses. </p>
+<blockquote>
+<p>I suspect either:<br>
+-&gt; The "be-an-intermediary" strategy by itself is successful at building trust, or, <br>
+-&gt; We are still targeting the demographics which are okay with donating money.</p>
+</blockquote>
+<p><br>  </p>
+<h1 id="quality-vs-speed">Quality vs. Speed</h1>
+<p>[This is a draft]</p>
+<p>For other great mental models, read <a href="https://blackboxofpm.com/product-management-mental-models-for-everyone-31e7828cb50b">this article</a> by Brandon Chu.</p>
+<p><br>  </p>
+<p><br></p>
+<h2 id="resources">Resources:</h2>
+<ul>
+<li><a href="https://daancorona.tech/">Website</a></li>
+<li><a href="https://www.youtube.com/watch?v=_OFUefO_Vvk">YouTube Video</a></li>
+<li><a href="https://daancorona.tech/download/DaanCorona.apk">Refer a business - App APK Link</a></li>
+<li><a href="https://dare2compete.com/o/volunteering-daancorona-111139">Volunteering Program</a></li>
+<li><a href="https://twitter.com/DaanCoronaIndia">Twitter</a></li>
+<li><a href="https://www.linkedin.com/company/daancorona/">LinkedIn</a></li>
+<li><a href="https://epcbits.wordpress.com/2020/05/23/daancorona-tech/">An Interview with the team</a></li>
+</ul>
+<h2 id="references">References:</h2>
+<ol>
+<li><a href="https://www.funraise.org/giving-report/past-reports">2018 Global Trends in Giving Report</a></li>
+<li>Read through our <a href="https://daancorona.tech/terms/">Terms of Service</a>, <a href="https://daancorona.tech/privacy/">Privacy Policy</a> and our <a href="https://daancorona.tech/about/">About</a> sections.</li>
+</ol>
+        </div>
+
+        <div class="meta">
+            <div>
+                <a href="../taaaag/daancorona/" class="tag">daancorona</a>
+                <a href="../taaaag/learnings/" class="tag">learnings</a>
+                <a href="../taaaag/statistics/" class="tag">statistics</a>
+                <a href="../taaaag/experience/" class="tag">experience</a>
+            </div>
+        </div>
+    </article>
+
+    <div class="container">
+        <!-- Begin MailChimp Signup Form -->
+
+        <div id="mc_embed_signup">
+            <form action="https://matthewkudija.us12.list-manage.com/subscribe/post?u=55dc59a5176654a0fed6d8145&amp;id=74322d0c56" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_55dc59a5176654a0fed6d8145_74322d0c56" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        
+        <!--End mc_embed_signup-->
+    </div>
+
+    <p>&copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> <a href=https://subwayHareArmy.github.io target="_blank">Ayush Yembarwar</a> | <a href="https://github.com/subwayHareArmy/subwayHareArmy.github.io" target="_blank">Source</a></p>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+    background-color: #272822;
+}
+
+table.dataframe {
+    font-family: Courier, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>
+
+</div>
+
+<!-- <section id="footer">
+    <div class="container">
+        <p>
+            &copy; 2005<script>new Date().getFullYear()>2005&&document.write("-"+new Date().getFullYear());</script> <a href=https://subwayHareArmy.github.io target="_blank">Ayush Yembarwar</a>
+        </p>
+        <p>
+            <a href="https://github.com/mkudija/blog" target="_blank">Source</a> | Built with <a href= "http://docs.getpelican.com/">Pelican</a> and <a href= "https://pages.github.com/">GitHub Pages</a>.
+        </p>   
+    </div>
+</section>
+ -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-121240916-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-121240916-1');
+    ga('send', 'pageview');
+</script>
+<!-- <script type="text/javascript" src="/docs/theme/js/bigfoot.js"></script> -->
+<script type="text/javascript" src="../../../../theme/js/bigfoot.js"></script>
+<script type="text/javascript">
+    $.bigfoot (
+    {
+
+    }
+    );
+</script>
+</body>
+</html>
