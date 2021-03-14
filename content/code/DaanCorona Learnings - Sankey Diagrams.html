@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+
+<html class="uk-notouch gr__automad_org" lang="en">
+
+
+
+    <head>
+
+        <meta name="Generator" content="Ideas4Free">
+        <meta name="description" content="Curated crowd-sourced ideas delivered to your mail. For free, duh.">
+
+        <title>Ideas4Free</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+ 
+    </head>
+
+
+    
+	
+	
+	
+    <body class="docs-home vsc-initialized" data-gr-c-s-loaded="true" style="">
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 600px;
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.SankeyDiagram);
+
+chart.data = [
+    // these are just for color, as properties are taken from data object where the name is first mentioned.
+    {from:"Cash in the U.S.", color:"#f47b20"},
+    {from:"Cash Overseas", color:"#000000"},
+
+    { from: "Source", to: "Total non financial companies", value: 100, color: "#f47b20", labelText: "[font-size:1.5em]DaanCorona's revenue\nsplitup\n\nBy mode of payment\n\n[/]Total Volume (%) \n [bold]100%[/b]", zIndex: 100 },
+
+
+    { from: "Total non financial companies", to: "UPI", value: 76.08, color: "#f47b20"},
+    { from: "Total non financial companies", to: "Card Payments", value: 16.29, color: "#f47b20", labelText: "Card Payments\n [bold]16.29%[/]" },
+	{ from: "Total non financial companies", to: "Net Banking", value: 7.63, color: "#f47b20"},
+
+	{ from: "UPI", to: "UPI_2", value: 76.08, color: "#f47b20", labelText: "UPI\n [bold]76.08%[/]" },
+		
+	{ from: "Card Payments", to: "Debit Card", value: 11.199, color: "#f47b20", labelText: "Debit Cards [bold]11.2%[/]" },
+	{ from: "Card Payments", to: "Credit Card", value: 5.091, color: "#f47b20", labelText: "Credit Cards [bold]5.09%[/]" },
+
+    { from: "Net Banking", to: "Net Banking_2", value: 7.63, color: "#f47b20", labelText: "Net Banking [bold]7.63%[/]" },
+	
+    
+];
+
+chart.paddingRight = 30;
+chart.paddingTop = 80;
+chart.paddingBottom = 80;
+chart.nodeAlign = "bottom";
+
+chart.minNodeSize = 0.001;
+
+chart.dataFields.fromName = "from";
+chart.dataFields.toName = "to";
+chart.dataFields.value = "value";
+chart.dataFields.color = "color";
+
+var linkTemplate = chart.links.template;
+linkTemplate.colorMode = "gradient";
+linkTemplate.fillOpacity = 1;
+linkTemplate.strokeOpacity = 1;
+
+linkTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+linkTemplate.readerTitle = "drag me!";
+linkTemplate.showSystemTooltip = true;
+linkTemplate.tooltipText = "";
+linkTemplate.propertyFields.zIndex = "zIndex";
+linkTemplate.tension = 0.6;
+
+chart.nodes.template.width = 0;
+chart.nodes.template.nameLabel.disabled = true;
+chart.nodes.template.draggable = true;
+chart.nodes.template.inert = true;
+chart.nodes.template.togglable = false;
+
+// making links draggable
+linkTemplate.events.on("down", function (event) {
+    var fromNode = event.target.dataItem.fromNode;
+    var toNode = event.target.dataItem.toNode;
+
+    var distanceToFromNode = am4core.math.getDistance(event.pointer.point, { x: fromNode.pixelX, y: fromNode.pixelY });
+    var distanceToToNode = Infinity;
+    if (toNode) {
+        distanceToToNode = am4core.math.getDistance(event.pointer.point, { x: toNode.pixelX, y: toNode.pixelY });
+    }
+
+    if (distanceToFromNode < distanceToToNode) {
+        fromNode.dragStart(event.pointer);
+    }
+    else {
+        toNode.dragStart(event.pointer);
+    }
+})
+
+
+// add labels
+var labelBullet = chart.links.template.bullets.push(new am4charts.LabelBullet());
+labelBullet.label.propertyFields.text = "labelText";
+labelBullet.propertyFields.locationX = "labelLocation";
+labelBullet.propertyFields.rotation = "labelRotation";
+labelBullet.label.horizontalCenter = "left";
+labelBullet.label.textAlign = "start";
+labelBullet.label.dx = -50;
+
+// add labels which will animate
+var bullet = chart.links.template.bullets.push(new am4charts.LabelBullet());
+bullet.label.text = "${value}";
+bullet.label.fill = am4core.color("#ffffff");
+bullet.label.isMeasured = false;
+bullet.isMeasured = false;
+
+// create animations
+chart.events.on("inited", function () {
+    for (var i = 0; i < chart.links.length; i++) {
+        var link = chart.links.getIndex(i);
+        var bullet = link.bullets.getIndex(1);
+        bullet.opacity = 0;
+
+        if (link.dataItem.toNode && link.dataItem.value > 10) {
+
+            bullet.label.fontSize = link.dataItem.value / 10;
+            firstHalfAnimation(bullet);
+        }
+        else {
+            link.bullets.removeValue(bullet);
+        }
+    }
+})
+
+function firstHalfAnimation(bullet) {
+    var duration = 6000 * Math.random() + 3000;
+    var animation = bullet.animate([{ property: "locationX", from: 0.2, to: 0.5 }, { property: "opacity", from: 0, to: 0.3 }], duration)
+    animation.events.on("animationended", function (event) {
+        secondHalfAnimation(event.target.object, duration);
+    })
+}
+
+function secondHalfAnimation(bullet, duration) {
+    var animation = bullet.animate([{ property: "locationX", from: 0.5, to: 0.8 }, { property: "opacity", from: 0.3, to: 0 }], duration)
+    animation.events.on("animationended", function (event) {
+        setTimeout(function () {
+            firstHalfAnimation(event.target.object)
+        }, Math.random() * 5000);
+    })
+}
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<!-- chart design inspired by Nicolas Rapp: https://nicolasrapp.com/studio/portfolio/cash-hoarders/  -->
+<div id="chartdiv"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<style>
+#chartdiv_2 {
+  width: 100%;
+  height: 600px;
+}
+
+</style>
+
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart_2 = am4core.create("chartdiv_2", am4charts.SankeyDiagram);
+
+chart_2.data = [
+    // these are just for color, as properties are taken from data object where the name is first mentioned.
+
+
+    { from: "Source", to: "Total Sales", value: 100, color: "#f47b20", labelText: "[font-size:1.5em]DaanCorona's revenue\nsplitup\n\nBy mode of access\n\n[/]Total Volume (%) \n [bold]100%[/b]", zIndex: 100 },
+
+    { from: "Total Sales", to: "Mobile Web", value: 63.87, color: "#f47b20", labelText: "Mobile Web Users\n [bold]64%[/]" },
+    { from: "Total Sales", to: "Desktop", value: 36.13, color: "#f47b20", labelText: "Desktop Users\n [bold]36%[/]" }
+	
+    
+];
+
+chart_2.paddingRight = 30;
+chart_2.paddingTop = 80;
+chart_2.paddingBottom = 80;
+chart_2.nodeAlign = "bottom";
+
+chart_2.minNodeSize = 0.001;
+
+chart_2.dataFields.fromName = "from";
+chart_2.dataFields.toName = "to";
+chart_2.dataFields.value = "value";
+chart_2.dataFields.color = "color";
+
+var linkTemplate_2 = chart_2.links.template;
+linkTemplate_2.colorMode = "gradient";
+linkTemplate_2.fillOpacity = 1;
+linkTemplate_2.strokeOpacity = 1;
+
+linkTemplate_2.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+linkTemplate_2.readerTitle = "drag me!";
+linkTemplate_2.showSystemTooltip = true;
+linkTemplate_2.tooltipText = "";
+linkTemplate_2.propertyFields.zIndex = "zIndex";
+linkTemplate_2.tension = 0.6;
+
+chart_2.nodes.template.width = 0;
+chart_2.nodes.template.nameLabel.disabled = true;
+chart_2.nodes.template.draggable = true;
+chart_2.nodes.template.inert = true;
+chart_2.nodes.template.togglable = false;
+
+// making links draggable
+linkTemplate_2.events.on("down", function (event) {
+    var fromNode = event.target.dataItem.fromNode;
+    var toNode = event.target.dataItem.toNode;
+
+    var distanceToFromNode = am4core.math.getDistance(event.pointer.point, { x: fromNode.pixelX, y: fromNode.pixelY });
+    var distanceToToNode = Infinity;
+    if (toNode) {
+        distanceToToNode = am4core.math.getDistance(event.pointer.point, { x: toNode.pixelX, y: toNode.pixelY });
+    }
+
+    if (distanceToFromNode < distanceToToNode) {
+        fromNode.dragStart(event.pointer);
+    }
+    else {
+        toNode.dragStart(event.pointer);
+    }
+})
+
+
+// add labels
+var labelBullet_2 = chart_2.links.template.bullets.push(new am4charts.LabelBullet());
+labelBullet_2.label.propertyFields.text = "labelText";
+labelBullet_2.propertyFields.locationX = "labelLocation";
+labelBullet_2.propertyFields.rotation = "labelRotation";
+labelBullet_2.label.horizontalCenter = "left";
+labelBullet_2.label.textAlign = "start";
+labelBullet_2.label.dx = -50;
+
+
+
+}); // end am4core.ready()
+</script>
+		
+		
+<div id="chartdiv_2"></div>
+		
+		
+		
+		
+		
+		
+		
+    </body>
+    
+</html>

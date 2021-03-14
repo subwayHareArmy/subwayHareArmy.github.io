@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc>https://subwayharearmy.github.io/</loc>
+<lastmod>2018-06-23T01:19:47-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://subwayharearmy.github.io/archives.html</loc>
+<lastmod>2018-06-23T01:19:47-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://subwayharearmy.github.io/tags.html</loc>
+<lastmod>2018-06-23T01:19:47-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://subwayharearmy.github.io/categories.html</loc>
+<lastmod>2018-06-23T01:19:47-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://subwayharearmy.github.io/about.html/</loc>
+<lastmod>2018-06-17T20:08:00+05:30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+</urlset>
