@@ -1,4 +1,4 @@
-Title: About Me
+Title: Ayush Yembarwar
 Date: 2018-06-17 20:08
 Modified: 2020-04-25 20:08
 Category: Pages
@@ -9,8 +9,6 @@ Summary: About Me - Ayush Yembarwar
 
 ![alt]({filename}../images/About/AyushYembarwar.png)  
 
-Ayush Yembarwar  
-=======  
 
 <!--
 This is a comment in HTML
