@@ -7,7 +7,7 @@ Slug: about
 Authors: Ayush Yembarwar
 Summary: About Me - Ayush Yembarwar
 
-![alt]({filename}../images/About/AyushYembarwar.png)  
+![alt]({filename}../images/About/AyushYembarwar.jpg)  
 
 
 <!--
