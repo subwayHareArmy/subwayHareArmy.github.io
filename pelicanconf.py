@@ -124,7 +124,7 @@ NOTEBOOK_DIR = 'notebooks'
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git", "CNAME", "README.md", "favicon.ico", "robots.txt", "404.md", "404.html", "team.html"]
 
-STATIC_PATHS = ['images', 'figures', 'videos', 'notebooks', 'code', 'favicon.ico' , 'extra/robots.txt', 'extra/favicon.ico']
+STATIC_PATHS = ['fonts', 'images', 'figures', 'videos', 'notebooks', 'code', 'favicon.ico' , 'extra/robots.txt', 'extra/favicon.ico']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'}
