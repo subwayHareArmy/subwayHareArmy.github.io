@@ -95,10 +95,15 @@
     color: #f8f8f2;
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url("../content/fonts/WorkSans/static/WorkSans-Regular.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font: 15px 'Source Sans Pro', sans-serif;
+  font: 15px 'Work Sans';
   line-height: 1.6em;
   color: #222;
   text-rendering: optimizeLegibility;
@@ -494,7 +499,7 @@ article .meta a.comments_btn:hover {
         <div class="article_content">
             <!-- PELICAN_BEGIN_SUMMARY -->
 
-<p><img alt src="https://subwayharearmy.github.io/images/StatisticalSignificance/Cover.png">  </p>
+<p><img alt src="../../images/StatisticalSignificance/Cover.png">  </p>
 <p>First things first. Yes, as is evident from the cover for the article, matplotlib now supports an <strong>xkcd</strong> mode, with 'sketched' graphs and figures. The <strong>Humor Sans</strong> font can be used to complete the effect.  </p>
 <p>Statistical inference is the cornerstone which most of statistical theory rests on. It involves statistical analyses, coupled with the usage of evidence and reasoning to draw conclusions or deductions.<br>
 Given the data that one owns, one can propose a hypothesis as a starting point for their investigation. This, in turn, might lead to further experimentation, measurement, and postulation. But where does it stop? We assume that the data we have is a small population drawn from a larger population, allowing us to make claims about the underlying probability distributions of that larger population. We finally give a proposition, to substantiate our claims of what the larger probability distribution is like. We shall be using methods of Statistical Inferencing in this article. <br>
@@ -503,7 +508,7 @@ Given the data that one owns, one can propose a hypothesis as a starting point f
 <p>Massively popular mobile game studio <a href="https://www.voodoo.io/games"><strong>Voodoo</strong></a> released <a href="https://play.google.com/store/apps/details?id=com.nomonkeys.ballblast"><strong>'Ball Blast'</strong></a> in 2017 and I've been hooked. Voodoo might not be a household name but their <strong>Instagram &amp; Facebook - centric advertising</strong> method has been working wonders for them, with their collective app downloads reaching <strong>2.1 billion</strong>. But that's enough about Voodoo, let's get back to Ball Blast.<br>
 <br/>
 Reminiscent of Miniclip's 2000's game <a href="https://www.miniclip.com/games/bubble-trouble/en/"><strong>Bubble Trouble</strong></a>, Ball blast is a simple arcade game, the objective being to shoot down bouncing boulders and surviving as long as possible.<br>
-<img alt src="https://subwayharearmy.github.io/images/StatisticalSignificance/Gameplay.jpg"><br>
+<img alt src="../../images/StatisticalSignificance/Gameplay.jpg"><br>
 <br/></p>
 <p>You earn <strong>coins</strong> normally by destroying the boulders, which can then be used to buy in-game permanent upgrades. Sometimes, breaking these boulders drops one of four available <strong>power-ups</strong>; temporary invincibility, increased firepower and so on. One of these power-ups is <strong>Sack-o-cash</strong>, it grants the player a large chunk of money. Having reached level 80, I got bored and started experimenting with the game. I started hoarding coins and <strong>stopped spending entirely</strong>. By the time I'd saved up a good amount of money, <strong>I perceived an increase in the number of times the boulders dropped up the Sack-o-cash power-up.</strong> Weird.   <br>
 <br/>
@@ -564,8 +569,8 @@ In our case, our datasets are:<br>
 <p><br>
 Our null hypothesis argues that there's no difference between the two datasets. We check these claims using the <strong>Welch t-test</strong>, an adaptation of the Student t-test.<br>
 The Welch t-statistic and degrees of freedom(dof) are given by:  </p>
-<p><img alt src="https://subwayharearmy.github.io/images/StatisticalSignificance/Welchformula.jpg">  </p>
-<p><img alt src="https://subwayharearmy.github.io/images/StatisticalSignificance/Welchdof.png">  </p>
+<p><img alt src="../../images/StatisticalSignificance/Welchformula.jpg">  </p>
+<p><img alt src="../../images/StatisticalSignificance/Welchdof.png">  </p>
 <blockquote>
 <p>where the "sigma's" are the standard deviations, <br>
       the "N's" are the number of instances, <br>
@@ -574,7 +579,7 @@ The Welch t-statistic and degrees of freedom(dof) are given by:  </p>
 <p>Using values from our datasets, we get a resulting t-statistic value of <strong>&lt;2.39&gt;</strong> and dof of <strong><wow></strong>.<br>
 This results in a p-value of <strong>&lt;&gt;</strong></p>
 <p>We can now choose a suitable significance level to reject our null hypothesis <strong>:D</strong>.   </p>
-<p><img alt src="https://subwayharearmy.github.io/images/StatisticalSignificance/correlation_xkcd.png"><br>
+<p><img alt src="../../images/StatisticalSignificance/correlation_xkcd.png"><br>
 Let it be <strong>&lt;0.5&gt;</strong>, thus our p-value is less than our significance level and hence we reject the null hypothesis.<br>
 <br/>
 The hypothesis H1 is statistically significant.  </p>
@@ -621,9 +626,9 @@ The hypothesis H1 is statistically significant.  </p>
 
         <div class="meta">
             <div>
-                <a href="https://subwayharearmy.github.io/taaaag/blog/" class="tag">blog</a>
-                <a href="https://subwayharearmy.github.io/taaaag/statistics/" class="tag">statistics</a>
-                <a href="https://subwayharearmy.github.io/taaaag/ai/" class="tag">AI</a>
+                <a href="../../taaaag/blog/" class="tag">blog</a>
+                <a href="../../taaaag/statistics/" class="tag">statistics</a>
+                <a href="../../taaaag/ai/" class="tag">AI</a>
             </div>
         </div>
     </article>

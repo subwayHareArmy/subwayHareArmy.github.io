@@ -95,10 +95,15 @@
     color: #f8f8f2;
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url("../content/fonts/WorkSans/static/WorkSans-Regular.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font: 15px 'Source Sans Pro', sans-serif;
+  font: 15px 'Work Sans';
   line-height: 1.6em;
   color: #222;
   text-rendering: optimizeLegibility;
@@ -498,9 +503,9 @@ article .meta a.comments_btn:hover {
 <p><br/></p>
 <h1 id="data">Data:</h1>
 <p>Using AppTweak, a common ASO tool, I was able to grab app installs over the past few months. <a href="https://docs.google.com/spreadsheets/d/1V5BWqrTYwKHU7b4hOU5sH5TSzR234saXKdAe8UAoCoY/edit?usp=sharing">Google Sheets Link</a>. Here is the data plotted granularly at the daily level:</p>
-<p><img alt src="https://subwayharearmy.github.io/images/Dunzo/graph_1.png">  </p>
+<p><img alt src="../images/Dunzo/graph_1.png">  </p>
 <p>These are just estimates. Being an external source, the numbers might be inaccurate. Choosing only the data with a confidence rating &gt; 0.5. The results are:  </p>
-<p><img alt src="https://subwayharearmy.github.io/images/Dunzo/graph_2.png">  </p>
+<p><img alt src="../images/Dunzo/graph_2.png">  </p>
 <p>I shall assume that the numbers for the iOS app follow a similar trend.</p>
 <p><br/></p>
 <h1 id="hypotheses">Hypotheses:</h1>
@@ -532,16 +537,16 @@ article .meta a.comments_btn:hover {
 <ul>
 <li>The Search bar is present on the bottom navbar as well as on the top of the home screen. On the home page, users need to scroll below the fold to see the Dunzo Assistant card. As search can be accessed from the navbar, deleting the search bar on top will make this card more visible. Also, search bars on the "groceries", "meats" pages might also be directing to the same main page.  </li>
 </ul>
-<p><img alt src="https://subwayharearmy.github.io/images/Dunzo/1_search_fruits.png">  <br>
-<img alt src="https://subwayharearmy.github.io/images/Dunzo/1_search_grocery.png">  <br>
-<img alt src="https://subwayharearmy.github.io/images/Dunzo/1_search_meat.png">  <br>
-<img alt src="https://subwayharearmy.github.io/images/Dunzo/1_search_medicines.png">  <br>
+<p><img alt src="../images/Dunzo/1_search_fruits.png">  <br>
+<img alt src="../images/Dunzo/1_search_grocery.png">  <br>
+<img alt src="../images/Dunzo/1_search_meat.png">  <br>
+<img alt src="../images/Dunzo/1_search_medicines.png">  <br>
 <br/></p>
 <ul>
 <li>A user searches for an item and clicks on a store. They do not like it and press the back button. This takes the user back to the search page but the search results are cleared and the user has to perform the search again. Retaining the search results will reduce friction. </li>
 </ul>
 <p>This image illustrates what happens currently:
-<img alt src="https://subwayharearmy.github.io/images/Dunzo/clear_searches.png">  </p>
+<img alt src="../images/Dunzo/clear_searches.png">  </p>
 <p><br/>
 - I would recommend a “filter” feature for the search. Users can restrict search results to certain categories (groceries, restaurants, etc) or sort results by price, completion time, etc.</p>
 <ul>
