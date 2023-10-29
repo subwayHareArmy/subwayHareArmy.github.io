@@ -4,6 +4,6 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://subwayharearmy.netlify.app",
+  site: 'https://subwayharearmy.github.io',
   integrations: [preact()]
 });
