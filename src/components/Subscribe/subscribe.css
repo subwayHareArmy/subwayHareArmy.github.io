@@ -1,0 +1,118 @@
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+.loading svg {
+  animation: spin 1s linear infinite;
+}
+
+.input {
+  color: var(--mauve-12);
+  background: var(--mauve-1);
+  padding: 0 var(--space-l);
+  padding-inline-end: 4rem;
+  z-index: 1;
+}
+
+.iconButton {
+  background: var(--pink-9);
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+  width: 48px;
+  height: 32px;
+  padding: 0;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  background: var(--pink-10);
+}
+
+.iconButton:disabled {
+  background: var(--pink-9);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.sniperLink {
+  background: var(--pink-9);
+  color: var(--white-a12);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-radius: var(--radius-m);
+  padding: 0 0.5rem;
+}
+
+.input,
+.sniperLink,
+.checkInbox {
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-full);
+  line-height: 1;
+}
+
+.input:hover {
+  outline: 3px solid var(--pink-a4);
+}
+
+.input:focus {
+  outline: 3px solid var(--pink-a9);
+}
+
+.input:disabled {
+  pointer-events: none;
+}
+
+.sniperLink:hover {
+  background: var(--pink-10);
+}
+
+.checkInbox {
+  background: var(--mauve-3);
+  color: var(--mauve-12);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sniperLink svg {
+  flex-shrink: 0;
+  position: relative;
+  margin-inline-start: auto;
+  margin-inline-end: 0.25rem;
+}
+
+.sniperLogo {
+  background-color: white;
+  width: 48px;
+  height: 32px;
+  padding: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.sniperLogo img {
+  width: 24px;
+}

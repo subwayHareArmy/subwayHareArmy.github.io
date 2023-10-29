@@ -1,0 +1,10 @@
+.date {
+  display: inline-flex;
+  align-items: center;
+  color: var(--mauve-11);
+}
+
+.date svg {
+  color: var(--pink-12);
+  margin-inline-end: var(--space-xs);
+}

@@ -1,0 +1,107 @@
+---
+import Center from "./Center.astro";
+import Picture from "./Picture.astro";
+import { RelativeDate } from "./RelativeDate/RelativeDate";
+
+interface Props {
+  slug: string;
+  title: string;
+  description?: string;
+  img?: ImageMetadata[];
+  imgAlt?: string;
+  datePublished?: Date;
+  dateModified?: Date;
+}
+
+const { title, description, img, imgAlt, datePublished, dateModified } =
+  Astro.props;
+---
+
+<header class="page-header">
+  {
+    img && imgAlt && (
+      <div class="page-image">
+        <Picture img={img} imgAlt={imgAlt} />
+      </div>
+    )
+  }
+  <Center>
+    <h1 itemprop="name" class="page-title">
+      {title}
+    </h1>
+    {description && <p class="page-subtitle">{description}</p>}
+    {
+      datePublished && (
+        <div class="page-dates">
+          <RelativeDate
+            date={datePublished}
+            prefix="Planted"
+            icon="seedling"
+            client:load
+          />
+          {dateModified && (
+            <RelativeDate
+              date={dateModified}
+              prefix="Last tended"
+              icon="sparkling"
+              client:load
+            />
+          )}
+        </div>
+      )
+    }
+  </Center>
+</header>
+
+<style>
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .page-header {
+    padding-block-end: var(--space-3xl);
+  }
+
+  .page-image {
+    background: var(--pink-5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  @supports (animation-timeline: view()) {
+    .page-image {
+      animation: fadeOut linear forwards;
+      animation-timeline: view();
+      animation-range: exit 0% exit calc(100% - 80px);
+    }
+  }
+
+  .page-title {
+    padding-block-start: var(--space-2xl);
+    text-wrap: balance;
+  }
+
+  .page-subtitle {
+    font-family: var(--font-serif);
+    font-size: var(--step-2);
+    line-height: var(--line-height-h4);
+    padding-block-start: var(--space-xs);
+    text-wrap: balance;
+  }
+
+  .page-dates {
+    padding-block-start: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+</style>

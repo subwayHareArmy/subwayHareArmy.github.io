@@ -1,0 +1,46 @@
+.toggleButton {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--mauve-11);
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggleButton:disabled {
+  cursor: default;
+}
+
+.toggleButton:hover {
+  background: var(--pink-a3);
+  color: var(--pink-12);
+}
+
+.toggleButton:active {
+  background: var(--pink-a4);
+}
+
+.toggleButton svg {
+  transform-origin: 50% 200%;
+  transition:
+    transform 0.4s ease-out,
+    opacity 0.2s ease-in-out;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.moon:not(.active) {
+  transform: rotate(60deg);
+}
+
+.sun:not(.active) {
+  transform: rotate(-60deg);
+}

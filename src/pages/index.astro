@@ -1,0 +1,107 @@
+---
+import Banner from "src/components/Banner.astro";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutCard from "./index/AboutCard.astro";
+import HeroCard from "./index/HeroCard.astro";
+import SubscribeCard from "./index/SubscribeCard.astro";
+import SynthCard from "./index/SynthCard.astro";
+---
+
+<BaseLayout
+  title="Eva Decker"
+  description="Eva is a designer and web developer based in Brooklyn, NY."
+  includeFooter
+>
+  <div class="bento-wrapper">
+    <div class="bento">
+      <div class="announcement">
+        <Banner
+          icon="music"
+          text="Hey, I made a new project. It's called Genderswap.fm and it's for covers."
+          type="info"
+          url="https://genderswap.fm"
+        />
+      </div>
+      <div class="hero">
+        <HeroCard />
+      </div>
+      <div class="about">
+        <AboutCard />
+      </div>
+      <div class="synth">
+        <SynthCard />
+      </div>
+      <div class="subscribe">
+        <SubscribeCard />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .bento-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bento {
+    display: grid;
+    padding: var(--space-xl);
+    padding-block-end: 0;
+    gap: var(--space-l);
+    grid-template:
+      "announcement announcement announcement"
+      "hero hero about"
+      "subscribe synth synth";
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto repeat(2, minmax(0, 1fr));
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  @media (width < 1080px) {
+    .bento {
+      grid-template:
+        "hero hero"
+        "announcement announcement"
+        "about subscribe"
+        "synth synth";
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (width < 560px) {
+    .bento {
+      grid-template:
+        "hero"
+        "announcement"
+        "about"
+        "synth"
+        "subscribe";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .announcement {
+    grid-area: announcement;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .synth {
+    grid-area: synth;
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+  }
+</style>

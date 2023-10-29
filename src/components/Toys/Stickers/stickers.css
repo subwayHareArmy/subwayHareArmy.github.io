@@ -1,0 +1,39 @@
+.sticker {
+  position: absolute;
+  width: 200px;
+  pointer-events: none;
+}
+
+.sticker:active {
+  cursor: grabbing;
+  pointer-events: auto;
+}
+
+.stickerPath {
+  pointer-events: auto;
+  cursor: grab;
+}
+
+.stickerPath:hover,
+.sticker:active .stickerPath {
+  stroke: var(--pink-9);
+  stroke-width: 6px;
+}
+
+.stickerPicture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  user-select: none;
+}
+
+.stickerSvg {
+  pointer-events: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  user-select: none;
+  filter: drop-shadow(0 1px 1px var(--black-a5));
+}

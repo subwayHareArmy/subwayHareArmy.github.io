@@ -1,0 +1,184 @@
+.prose::after {
+  content: "⁂";
+  display: block;
+  text-align: center;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  font-size: var(--step-3);
+}
+
+.prose p,
+.prose ol,
+.prose ul {
+  font-family: var(--font-serif);
+}
+
+.prose a {
+  text-indent: 0;
+}
+
+.prose p a,
+.prose li a {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: var(--mauve-8);
+  text-underline-offset: 0.1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: calc(var(--space-2xl) * 2);
+  margin-bottom: var(--space-m);
+}
+
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+  color: var(--mauve-11);
+  display: inline-flex;
+  align-items: center;
+  margin-inline-start: var(--space-s);
+  padding: var(--space-xs);
+  border-radius: var(--radius-full);
+  position: relative;
+  top: -0.1em;
+}
+
+.prose a:hover,
+.prose a:focus {
+  color: var(--pink-11);
+}
+
+.prose h1 a:hover,
+.prose h2 a:hover,
+.prose h3 a:hover,
+.prose h4 a:hover,
+.prose h5 a:hover,
+.prose h6 a:hover {
+  background-color: var(--pink-3);
+}
+
+.prose h1 a svg,
+.prose h2 a svg,
+.prose h3 a svg,
+.prose h4 a svg,
+.prose h5 a svg,
+.prose h6 a svg {
+  width: var(--step-0);
+  height: var(--step-0);
+}
+
+.prose p a:hover,
+.prose p a:focus,
+.prose li a:hover,
+.prose li a:focus {
+  text-decoration-color: var(--pink-9);
+}
+
+.prose h2 {
+  margin-top: var(--space-2xl);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p + p {
+  text-indent: 1.3em;
+}
+
+.prose * + ul,
+.prose * + ol,
+.prose * + blockquote {
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.prose ul,
+.prose ol {
+  list-style-type: none;
+  padding-left: 1.3em;
+}
+
+.prose ul ul,
+.prose ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose li {
+  position: relative;
+}
+
+.prose li::before {
+  position: absolute;
+  width: 1.3em;
+  left: -1.3em;
+  color: var(--mauve-11);
+}
+
+.prose ul li::before {
+  font-family: var(--font-sans);
+  content: "→";
+  transform: scale(1) translateY(0.015em);
+  transform-origin: left;
+}
+
+.prose ol li::before {
+  font-family: var(--font-sans);
+  content: counter(list-item, decimal-leading-zero);
+  font-variant-numeric: tabular-nums;
+}
+
+.prose code {
+  background-color: var(--mauve-3);
+  border-radius: var(--radius-xs);
+  padding: 0.15em 0.3em;
+  font-size: 0.8em;
+}
+
+.prose abbr {
+  border-bottom: none;
+  text-decoration: dotted underline;
+  text-decoration-color: var(--mauve-7);
+  text-underline-offset: 0.1em;
+  position: relative;
+  cursor: help;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--mauve-7);
+  padding-left: var(--space-l);
+  font-style: italic;
+  hanging-punctuation: first;
+}
+
+.prose blockquote cite {
+  display: block;
+  font-style: normal;
+}
+
+.prose blockquote cite::before {
+  content: "—";
+  color: var(--mauve-11);
+  margin-inline-end: var(--space-xs);
+}
+
+.prose sup,
+.prose sub {
+  font-family: var(--font-caption);
+  vertical-align: baseline;
+  position: relative;
+  top: -0.3em;
+}
+
+.prose sub {
+  top: 0.3em;
+}
