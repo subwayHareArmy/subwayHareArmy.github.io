@@ -1,25 +1,19 @@
 ---
 title: Ayush Yembarwar
-description: Designer and medium-good software engineer.
-datePublished: 2023-10-03 01:03:55-04:00
-dateModified: 2023-10-27 11:41:02-04:00
-img: ["./img600.webp", "./img900.webp", "./img1200.webp"]
-imgAlt: A Mac desktop with various application windows, including Figma and Chrome. At the front is Photo Booth, with the countdown timer at 1, about to take a photo of Eva.
-ogImage: ./img1200.webp
+description: Software Engineer @ AJIO.
+datePublished: 2018-06-17 20:08:00+05:30
+dateModified: 2023-10-29 17:30:00+05:30
+img: ["./AyushYembarwar.jpg", "./img900.webp", "./img1200.webp"]
+imgAlt: A photo of Ayush.
+ogImage: ./AyushYembarwar.jpg
 ---
 
-I began coding in the late 2000s, typing into a textarea of vBulletin for a Nintendo fan forum. Without syntax highlighting, `border-radius`, or `flexbox`, I'd spend hours exporting assets from Photoshop and laying out content in CSS.
+This space is a personal blog of sorts, with posts on all things that catch my fancy - AI, Quantum Computing, Digital Art, and everything in between.
+Cheers.
 
-Type a few characters, and suddenly every `button` changes colors on hover. (From blue to... a slightly different blue!) I thought this was the coolest thing in the world.
-
-I still think coding is cool.
-
-Most of my job titles have included the word "designer", but code is my medium and the browser is my favorite design tool. I fully believe that designing for the web means working *in the medium* of the web—namely, HTML and CSS. Interactive mediums deserve interactive iteration.
-
-I love the web, but when I need to think about gnarly problems, I take my sketchbook and my pen, I find a quiet place, and I write.
-
-For the past three years, I've worked as a freelance designer and developer, embedding on teams to strengthen design systems. I try to help designers learn more about code, and I try to convince engineers they have better design instincts than they think. Sometimes I succeed.
-
-Occasionally I play piano and listen to city pop and noodle with synths. I like [reading](https://goodreads.com/evadecker) about urbanism, transit, and queer history. I'd like to have a garden one day. I'm still a Nintendo fan.
-
-I'm currently open to new freelance or full-time work. If you have a role that sounds like a fit, email me at hey@evadecker.com.
+  
+- [Website / Blog](https://subwayHareArmy.github.io)  
+- [LinkedIn](https://www.linkedin.com/in/ayush-yembarwar-646173b5/)
+- [GitHub](https://github.com/subwayHareArmy)
+- [Twitter](https://twitter.com/AyushYembarwar)
+- [E-Mail](mailto:AyushYembarwar@gmail.com?Subject=Redirect%20from%20Blog%3A%20&amp;Body=Hey%20Ayush%2C%0A%0A)
