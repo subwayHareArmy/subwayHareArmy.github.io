@@ -4,7 +4,7 @@ description: List of my published Google Assistant Actions and their Privacy Pol
 datePublished: 2019-07-19 12:48:00+05:30
 dateModified: 2019-07-19 12:48:00+05:30
 # img: ["./SWCLogo.png"]
-imgAlt: Logo for 
+imgAlt: Logo for Scrabble Word Checker, a Google Assistant Action 
 # ogImage: ./SWCLogo.png
 Tags: google, assistant, ayush yembarwar, privacy policy
 ---
@@ -21,7 +21,11 @@ Although other solutions for word checking for Scrabble already exist, I found t
 
 <br>
 
-Scrabble Word Checker checks relevant Scrabble Dictionaries, compares rules, and return a tile score along with the query.   
+Scrabble Word Checker checks relevant Scrabble Dictionaries, compares rules, and return a tile score along with the query. 
+
+<br>
+
+A quick "Hey, Google. Ask Scrabble Word Checker if 'gullible' is a valid Scrabble word?" is all you need.
 
 <br>
 

@@ -1,20 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+// TODO - Find a way to align the image to the centre, and fix the 404 image relative location
 ---
 
 <BaseLayout title="404: Not Found" description="This page could not be found.">
   <div class="scanlines"></div>
   <div class="glitchContainer">
     <div class="text">
-      <h1 class="title">404</h1>
-      <div class="subtitle">Not Found</div>
+      <h1 class="title">What are you even doing here?</h1>
+      <div class="subtitle">Here is an MNIST 404:
+        
+      </div>
+      <img style="text-align: center;" src="./../content/pages/404/404.png">
       <div class="textClip">
-        <h1 class="title">404</h1>
-        <div class="subtitle">Not Found</div>
+        <h1 class="title">What are you even doing here?</h1>
+        <div class="subtitle">Here is an MNIST 404:
+          
+        </div>
+        <img style="text-align: center;" src="./../content/pages/404/404.png">
       </div>
     </div>
   </div>
-</BaseLayout>
+</BaseLayout>	
 
 <style>
   @keyframes text-offset {
@@ -93,7 +100,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .subtitle {
-    font-size: clamp(60px, 10vw, 96px);
+    font-size: clamp(30px, 5vw, 48px);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-loose);
@@ -118,7 +125,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   .title {
     font-family: var(--font-sans);
-    font-size: clamp(180px, 30vw, 280px);
+    font-size: clamp(90px, 15vw, 140px);
     font-weight: var(--font-weight-bold);
   }
 </style>
