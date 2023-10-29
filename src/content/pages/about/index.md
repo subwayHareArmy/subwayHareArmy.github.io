@@ -7,6 +7,7 @@ img: ["./AyushYembarwar.jpg", "./img900.webp", "./img1200.webp"]
 imgAlt: A photo of Ayush.
 ogImage: ./AyushYembarwar.jpg
 ---
+<!-- TODO: REPLACE IMAGEs in the frontmatter to a list of 600height 900height and 1200height images, preferably in lossless .webp-->
 
 This space is a personal blog of sorts, with posts on all things that catch my fancy - AI, Quantum Computing, Digital Art, and everything in between.
 Cheers.

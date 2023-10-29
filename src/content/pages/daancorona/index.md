@@ -3,12 +3,17 @@ title: DaanCorona
 description: a social venture I founded during the COVID-19 pandemic
 datePublished: 2019-04-23 20:08:00+05:30
 dateModified: 2020-04-23 20:08:00+05:30
-
+img: ["./DAANCORONA_LOGO1200.png"]
+imgAlt: A photo of Ayush.
+ogImage: ./DAANCORONA_LOGO1200.png
 Tags: coronavirus, social entrepreneurship, donation
 ---
 
+<!-- TODO: REPLACE IMAGE IN the frontmatter to the other daan corona photo that was made, the one with the faces of the people we had helped-->
+<!-- TODO: REPLACE IMAGEs in the frontmatter to a list of 600height 900height and 1200height images, preferably in lossless .webp-->
+
 <!-- PELICAN_BEGIN_SUMMARY -->
-![alt](./DAANCORONA_LOGO.png)
+![alt](./DAANCORONA_LOGO1200.png)
 
 <br>
 

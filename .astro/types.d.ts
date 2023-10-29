@@ -215,6 +215,13 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
+"google-assistant/index.md": {
+	id: "google-assistant/index.md";
+  slug: "google-assistant";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
 };
 
 	};
