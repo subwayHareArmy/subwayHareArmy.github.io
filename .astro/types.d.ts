@@ -208,6 +208,13 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
+"daancorona/index.md": {
+	id: "daancorona/index.md";
+  slug: "daancorona";
+  body: string;
+  collection: "pages";
+  data: InferEntrySchema<"pages">
+} & { render(): Render[".md"] };
 };
 
 	};
