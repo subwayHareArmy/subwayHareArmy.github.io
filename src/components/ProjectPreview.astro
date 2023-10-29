@@ -14,8 +14,7 @@ interface Props {
   imgAlt?: string;
 }
 
-const { title, description, datePublished, url, repo, img, imgAlt } =
-  Astro.props;
+const { title, description, datePublished, url, repo, img, imgAlt } = Astro.props;
 
 const date = dayjs(datePublished).format("MMMM YYYY");
 ---
