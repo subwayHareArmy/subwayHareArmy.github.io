@@ -6,22 +6,22 @@ test.beforeEach(async ({ page }) => {
 
 test("includes correct social links", async ({ page }) => {
   const githubLink = page.getByRole("link", { name: "Github" });
-  const linkedInLink = page.getByRole("link", { name: "LinkedIn" });
+  const twitterLink = page.getByRole("link", { name: "Twitter" });
 
   await expect(githubLink).toHaveAttribute(
     "href",
-    "https://github.com/evadecker"
+    "https://github.com/subwayharearmy"
   );
-  await expect(linkedInLink).toHaveAttribute(
+  await expect(twitterLink).toHaveAttribute(
     "href",
-    "https://linkedin.com/in/evadecker"
+    "https://twitter.com/ayushyembarwar"
   );
 });
 
 test("opens social links in new tab", async ({ page }) => {
   const githubLink = page.getByRole("link", { name: "Github" });
-  const linkedInLink = page.getByRole("link", { name: "LinkedIn" });
+  const twitterLink = page.getByRole("link", { name: "Twitter" });
 
   await expect(githubLink).toHaveAttribute("target", "_blank");
-  await expect(linkedInLink).toHaveAttribute("target", "_blank");
+  await expect(twitterLink).toHaveAttribute("target", "_blank");
 });
