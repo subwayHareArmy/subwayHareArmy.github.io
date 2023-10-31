@@ -227,7 +227,9 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"projects": {
+		"blog": {
+};
+"projects": {
 "america-my-face/index": {
 	id: "america-my-face/index";
   collection: "projects";

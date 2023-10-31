@@ -3,9 +3,9 @@ title: DaanCorona
 description: a social venture I founded during the COVID-19 pandemic
 datePublished: 2019-04-23 20:08:00+05:30
 dateModified: 2020-04-23 20:08:00+05:30
-img: ["./DAANCORONA_LOGO1200.png"]
-imgAlt: A photo of Ayush.
-ogImage: ./DAANCORONA_LOGO1200.png
+img: ["./daancorona_progress.png"]
+imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
+ogImage: ./daancorona_progress.png
 Tags: coronavirus, social entrepreneurship, donation
 ---
 
@@ -21,7 +21,7 @@ Tags: coronavirus, social entrepreneurship, donation
 
 <br>
 
-We built DaanCorona to help local businesses without income sources, during the COVID-19 lockdown. In these efforts, I **co-led** (1 of two) a diverse 16 member team and my role was most similar to one of a **PM** (Product Manager). I wrote about my learnings, too, [HERE](https://subwayharearmy.github.io/drafts/daancorona-learnings.html).  
+We built DaanCorona to help local businesses without income sources, during the COVID-19 lockdown. In these efforts, I **co-led** (one of two) a diverse 16 member team and my role was most similar to one of a **PM**. I wrote about my learnings, too, [here](https://subwayharearmy.github.io/drafts/daancorona-learnings.html).  
 
 <br>
 
