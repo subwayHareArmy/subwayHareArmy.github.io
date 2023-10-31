@@ -22,6 +22,7 @@
     "@astrojs/check": "^0.2.0",
     "@astrojs/markdown-remark": "^3.2.1",
     "@astrojs/mdx": "^1.1.1",
+    "@astrojs/partytown": "^2.0.1",
     "@astrojs/react": "^3.0.3",
     "@astrojs/sitemap": "^3.0.1",
     "@astrojs/vercel": "^5.0.2",
