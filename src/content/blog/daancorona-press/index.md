@@ -12,13 +12,19 @@ visibility: public
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](../images/DaanCorona/DAANCORONA_LOGO.png)  <br>
+![alt](./DAANCORONA_LOGO.png)
+
+<br>
 
 **DaanCorona** is an online platform for **selling vouchers for India's largely undigitized** small and medium **businesses**. You can find it here - [https://daancorona.tech](https://daancorona.tech)  
+
+<br>
 
 I built DaanCorona along with 16 others during the COVID-19 lockdown. In these efforts I wore many hats (ideation, legal, etc) - my role was that of a **co-lead** (one of two) and a **PM** (Product Manager).   
 
 <!-- PELICAN_END_SUMMARY -->
+
+<br>
 
 Recently, DaanCorona got some press! Here's an [interview](https://epcbits.wordpress.com/2020/05/23/daancorona-tech/) we did with the English Press Club at BITS Pilani. Here's [another](https://online.fliphtml5.com/hfdbv/vrzd/#p=9) with the Alumni Relations Cell. We were also featured on [gocoronago](http://gocoronago.org/).  
 

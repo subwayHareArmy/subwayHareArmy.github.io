@@ -12,7 +12,7 @@ visibility: public
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](..\images\BuzzFlossQuizzing\BuzzFloss.png)  
+![alt](./BuzzFloss.png)  
 
 <br>
 
