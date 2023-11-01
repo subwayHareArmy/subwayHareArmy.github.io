@@ -185,9 +185,93 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"ball-blast-statistical-significance/index.md": {
+	id: "ball-blast-statistical-significance/index.md";
+  slug: "ball-blast-statistical-significance";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"character-sheets-ebooks-ux/index.md": {
+	id: "character-sheets-ebooks-ux/index.md";
+  slug: "character-sheets-ebooks-ux";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cheat-dare2compete/index.md": {
+	id: "cheat-dare2compete/index.md";
+  slug: "cheat-dare2compete";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cherryizer/index.md": {
+	id: "cherryizer/index.md";
+  slug: "cherryizer";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"daancorona-learnings/index.md": {
+	id: "daancorona-learnings/index.md";
+  slug: "daancorona-learnings";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"daancorona-press/index.md": {
+	id: "daancorona-press/index.md";
+  slug: "daancorona-press";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"erin-mckean/index.md": {
+	id: "erin-mckean/index.md";
+  slug: "erin-mckean";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"following-matt-mullenweg/index.md": {
+	id: "following-matt-mullenweg/index.md";
+  slug: "following-matt-mullenweg";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "pelican-setup/index.md": {
 	id: "pelican-setup/index.md";
   slug: "pelican-setup";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"scrabble-word-checker/index.md": {
+	id: "scrabble-word-checker/index.md";
+  slug: "scrabble-word-checker";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sudoq-quantum-sudoku-solver/index.md": {
+	id: "sudoq-quantum-sudoku-solver/index.md";
+  slug: "sudoq-quantum-sudoku-solver";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"temple-inquiry/index.md": {
+	id: "temple-inquiry/index.md";
+  slug: "temple-inquiry";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"youtube-history/index.md": {
+	id: "youtube-history/index.md";
+  slug: "youtube-history";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

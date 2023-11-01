@@ -49,6 +49,7 @@ export const collections = {
       z.object({
         title: z.string(),
         description: z.string(),
+        // // TODO: Go through all blogposts and make sure there is some good description in all the posts
         datePublished: z.date(),
         dateModified: z.date(),
         img: image().array().optional(),
@@ -59,6 +60,7 @@ export const collections = {
         url: z.string().optional(),
         visibility: z.enum(["private", "unlisted", "public"]),
         // // TODO: Write about this visibility strategy (similar to Youtube) in the readme or somewhere
+        // TODO: Add a field for authors as well, apparently that helps with SEO
       })
   })
 };
