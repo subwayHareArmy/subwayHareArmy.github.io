@@ -58,6 +58,7 @@ export const collections = {
         tags: z.array(z.string()).optional(),
         url: z.string().optional(),
         visibility: z.enum(["private", "unlisted", "public"]),
+        // // TODO: Write about this visibility strategy (similar to Youtube) in the readme or somewhere
       })
   })
 };
