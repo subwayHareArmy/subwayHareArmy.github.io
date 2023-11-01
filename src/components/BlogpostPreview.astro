@@ -6,6 +6,7 @@ import Picture from "./Picture.astro";
 import type { DetailedPeerCertificate } from "tls";
 
 interface Props {
+  slug: string
   title: string;
   description: string;
   datePublished: Date;
@@ -19,23 +20,24 @@ interface Props {
   visibility: string;
 }
 
-const { title, description, datePublished, dateModified, 
+const { slug, title, description, datePublished, dateModified, 
   url, repo, img, imgAlt, ogImage, tags, visibility } = Astro.props;
 
 const date = dayjs(datePublished).format("MMMM YYYY");
+const blogpostPath = "/blog/" + slug;
 ---
 
 { visibility==="public" && (
   <div class="blogpost">
     {
       img && imgAlt && (
-        <a class="img" href={url}>
+        <a class="img" href={blogpostPath}>
           <Picture img={img} imgAlt={imgAlt} />
         </a>
       )
     }
     <div class="details">
-      <a class="title" href={url}>
+      <a class="title" href={blogpostPath}>
         <h2>{title}</h2>
       </a>
       <div class="description">

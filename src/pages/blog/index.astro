@@ -22,8 +22,9 @@ const description = "A kinda crappy piece of internet real estate, but it's mine
   <Center>
     <section class="blog">
       {
-        sortedBlog.map(({ data }) => (
+        sortedBlog.map(({ slug, data }) => (
           <BlogpostPreview
+            slug={slug}
             title={data.title}
             description={data.description}
             datePublished={data.datePublished}
