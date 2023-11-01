@@ -42,4 +42,21 @@ export const collections = {
         repo: z.string().optional(),
       }),
   }),
+
+  blog: defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        datePublished: z.date(),
+        dateModified: z.date(),
+        img: image().array().optional(),
+        imgAlt: z.string().optional(),
+        repo: z.string().optional(),
+        ogImage: image().optional(),
+        tags: z.array(z.string()).optional(),
+        url: z.string().optional(),
+      })
+  })
 };

@@ -184,7 +184,16 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"notes": {
+		"blog": {
+"pelican-setup/index.md": {
+	id: "pelican-setup/index.md";
+  slug: "pelican-setup";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
+"notes": {
 "portfolio.mdx": {
 	id: "portfolio.mdx";
   slug: "portfolio";
@@ -227,9 +236,7 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"blog": {
-};
-"projects": {
+		"projects": {
 "america-my-face/index": {
 	id: "america-my-face/index";
   collection: "projects";
