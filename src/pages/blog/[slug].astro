@@ -8,9 +8,16 @@ export interface Props {
 }
 
 export async function getStaticPaths() {
+  
   const blog = await getCollection("blog");
+  var blogpostsToRender = blog.reduce(function(filtered, blogpost) {
+    if (blogpost.data.visibility!=="private") {
+      filtered.push(blogpost);
+    }
+  return filtered;
+  }, []);
 
-  return blog.map((blogpost) => ({
+  return blogpostsToRender.map((blogpost) => ({
     params: { slug: blogpost.slug },
     props: { blogpost },
   }));

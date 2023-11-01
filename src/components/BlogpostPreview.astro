@@ -3,58 +3,66 @@ import dayjs from "dayjs";
 
 import { Icon } from "./Icon/Icon";
 import Picture from "./Picture.astro";
+import type { DetailedPeerCertificate } from "tls";
 
 interface Props {
   title: string;
   description: string;
   datePublished: Date;
+  dateModified: Date;
   url: string;
   repo?: string;
   img?: ImageMetadata[];
   imgAlt?: string;
+  ogImage?: ImageMetadata;
+  tags?: string[];
+  visibility: string;
 }
 
-const { title, description, datePublished, url, repo, img, imgAlt } = Astro.props;
+const { title, description, datePublished, dateModified, 
+  url, repo, img, imgAlt, ogImage, tags, visibility } = Astro.props;
 
 const date = dayjs(datePublished).format("MMMM YYYY");
 ---
 
-<div class="blogpost">
-  {
-    img && imgAlt && (
-      <a class="img" href={url}>
-        <Picture img={img} imgAlt={imgAlt} />
-      </a>
-    )
-  }
-  <div class="details">
-    <a class="title" href={url}>
-      <h2>{title}</h2>
-    </a>
-    <div class="description">
-      {description}{" "}
-      <time class="date" datetime={datePublished.toString()}>{date}</time>
-    </div>
-    <footer class="links">
-      {
-        url && (
-        <a class="link" href={url}>
-            <Icon icon="link" size="small" />
-            <span class="url">{url.replace(/^https?:\/\//, "")}</span>
+{ visibility==="public" && (
+  <div class="blogpost">
+    {
+      img && imgAlt && (
+        <a class="img" href={url}>
+          <Picture img={img} imgAlt={imgAlt} />
         </a>
-        )
-      }
-      {
-        repo && (
-          <a class="link" href={`https://github.com/${repo}`}>
-            <Icon icon="github" size="small" />
-            <span class="url">{repo}</span>
+      )
+    }
+    <div class="details">
+      <a class="title" href={url}>
+        <h2>{title}</h2>
+      </a>
+      <div class="description">
+        {description}{" "}
+        <time class="date" datetime={datePublished.toString()}>{date}</time>
+      </div>
+      <footer class="links">
+        {
+          url && (
+          <a class="link" href={url}>
+              <Icon icon="link" size="small" />
+              <span class="url">{url.replace(/^https?:\/\//, "")}</span>
           </a>
-        )
-      }
-    </footer>
+          )
+        }
+        {
+          repo && (
+            <a class="link" href={`https://github.com/${repo}`}>
+              <Icon icon="github" size="small" />
+              <span class="url">{repo}</span>
+            </a>
+          )
+        }
+      </footer>
+    </div>
   </div>
-</div>
+)}
 
 <style lang="scss">
   .blogpost {

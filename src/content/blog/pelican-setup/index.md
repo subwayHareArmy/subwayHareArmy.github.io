@@ -7,6 +7,7 @@ dateModified: 2018-06-23 23:14:00+05:30
 # imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
 # ogImage: ./daancorona_progress.png
 tags: ["pelican", "blog", "first post"]
+visibility: public
 ---
 
 

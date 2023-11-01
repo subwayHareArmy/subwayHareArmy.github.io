@@ -57,6 +57,7 @@ export const collections = {
         ogImage: image().optional(),
         tags: z.array(z.string()).optional(),
         url: z.string().optional(),
+        visibility: z.enum(["private", "unlisted", "public"]),
       })
   })
 };
