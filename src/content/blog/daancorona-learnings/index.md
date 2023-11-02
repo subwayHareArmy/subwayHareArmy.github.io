@@ -32,7 +32,7 @@ Here's an [interview](https://epcbits.wordpress.com/2020/05/23/daancorona-tech/)
 
 <br>  
 
-I already wrote an explanatory post regarding this social initiative, [here]({filename}../../pages/daancorona.html).  
+I already wrote an explanatory post regarding this social initiative, [here](./pages/daancorona).  
 
 <br>  
 

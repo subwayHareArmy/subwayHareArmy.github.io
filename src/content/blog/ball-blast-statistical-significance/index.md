@@ -73,9 +73,9 @@ The dataset that I ended up with had the following metrics:
 Our null hypothesis argues that there's no difference between the two datasets. We check these claims using the **Welch t-test**, an adaptation of the Student t-test.  
 The Welch t-statistic and degrees of freedom(dof) are given by:  
 
-![alt]({filename}../images/StatisticalSignificance/Welchformula.jpg)  
+<!-- ![alt]({filename}../images/StatisticalSignificance/Welchformula.jpg)   -->
   
-![alt]({filename}../images/StatisticalSignificance/Welchdof.png)  
+<!-- ![alt]({filename}../images/StatisticalSignificance/Welchdof.png)   -->
 
 > where the "sigma's" are the standard deviations,   
 >       the "N's" are the number of instances,   
