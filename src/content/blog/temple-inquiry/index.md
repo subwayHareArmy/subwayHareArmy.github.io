@@ -12,7 +12,7 @@ visibility: private
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](..\images\TempleInquiry\mandir.png)  
+<!-- ![alt](./TempleInquiry/mandir.png)   -->
 
 
 Ever doubt the people's claims of the Ram Mandir being constructed here? <br>
