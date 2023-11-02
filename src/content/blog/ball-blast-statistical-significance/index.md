@@ -26,7 +26,8 @@ Ball Blast
 Massively popular mobile game studio [**Voodoo**](https://www.voodoo.io/games) released [**'Ball Blast'**](https://play.google.com/store/apps/details?id=com.nomonkeys.ballblast) in 2017 and I've been hooked. Voodoo might not be a household name but their **Instagram & Facebook - centric advertising** method has been working wonders for them, with their collective app downloads reaching **2.1 billion**. But that's enough about Voodoo, let's get back to Ball Blast.  
 <br/>
 Reminiscent of Miniclip's 2000's game [**Bubble Trouble**](https://www.miniclip.com/games/bubble-trouble/en/), Ball blast is a simple arcade game, the objective being to shoot down bouncing boulders and surviving as long as possible.  
-![alt]({filename}../images/StatisticalSignificance/Gameplay.jpg)  
+
+<!-- ![alt]({filename}../images/StatisticalSignificance/Gameplay.jpg)   -->
 <br/>
 
 You earn **coins** normally by destroying the boulders, which can then be used to buy in-game permanent upgrades. Sometimes, breaking these boulders drops one of four available **power-ups**; temporary invincibility, increased firepower and so on. One of these power-ups is **Sack-o-cash**, it grants the player a large chunk of money. Having reached level 80, I got bored and started experimenting with the game. I started hoarding coins and **stopped spending entirely**. By the time I'd saved up a good amount of money, **I perceived an increase in the number of times the boulders dropped up the Sack-o-cash power-up.** Weird.     
