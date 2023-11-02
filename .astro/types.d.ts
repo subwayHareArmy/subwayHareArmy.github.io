@@ -190,98 +190,98 @@ declare module 'astro:content' {
   slug: "ball-blast-statistical-significance";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "character-sheets-ebooks-ux/index.md": {
 	id: "character-sheets-ebooks-ux/index.md";
   slug: "character-sheets-ebooks-ux";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cheat-dare2compete/index.md": {
 	id: "cheat-dare2compete/index.md";
   slug: "cheat-dare2compete";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cherryizer/index.md": {
 	id: "cherryizer/index.md";
   slug: "cherryizer";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "daancorona-learnings/index.md": {
 	id: "daancorona-learnings/index.md";
   slug: "daancorona-learnings";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "daancorona-press/index.md": {
 	id: "daancorona-press/index.md";
   slug: "daancorona-press";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "erin-mckean/index.md": {
 	id: "erin-mckean/index.md";
   slug: "erin-mckean";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "following-matt-mullenweg/index.md": {
 	id: "following-matt-mullenweg/index.md";
   slug: "following-matt-mullenweg";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "new-astro-blog/index.md": {
 	id: "new-astro-blog/index.md";
   slug: "new-astro-blog";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "pelican-setup/index.md": {
 	id: "pelican-setup/index.md";
   slug: "pelican-setup";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "scrabble-word-checker/index.md": {
 	id: "scrabble-word-checker/index.md";
   slug: "scrabble-word-checker";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "sudoq-quantum-sudoku-solver/index.md": {
 	id: "sudoq-quantum-sudoku-solver/index.md";
   slug: "sudoq-quantum-sudoku-solver";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "temple-inquiry/index.md": {
 	id: "temple-inquiry/index.md";
   slug: "temple-inquiry";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "youtube-history/index.md": {
 	id: "youtube-history/index.md";
   slug: "youtube-history";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 "notes": {
@@ -290,7 +290,7 @@ declare module 'astro:content' {
   slug: "portfolio";
   body: string;
   collection: "notes";
-  data: any
+  data: InferEntrySchema<"notes">
 } & { render(): Render[".mdx"] };
 };
 "pages": {
@@ -299,28 +299,28 @@ declare module 'astro:content' {
   slug: "about";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 "colophon/index.md": {
 	id: "colophon/index.md";
   slug: "colophon";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 "daancorona/index.md": {
 	id: "daancorona/index.md";
   slug: "daancorona";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 "google-assistant/index.md": {
 	id: "google-assistant/index.md";
   slug: "google-assistant";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 };
 
@@ -331,17 +331,17 @@ declare module 'astro:content' {
 "america-my-face/index": {
 	id: "america-my-face/index";
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 };
 "boundaries-map/index": {
 	id: "boundaries-map/index";
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 };
 "genderswap-fm/index": {
 	id: "genderswap-fm/index";
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 };
 };
 
@@ -349,5 +349,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }
