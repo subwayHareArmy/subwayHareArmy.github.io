@@ -15,10 +15,10 @@ export async function getStaticPaths() {
       filtered.push(blogpost);
     }
   return filtered;
-  }, []);
+  }, Array());
 
   return blogpostsToRender.map((blogpost) => ({
-    params: { slug: blogpost.slug },
+    params: { slug: blogpost.slug},
     props: { blogpost },
   }));
 }
