@@ -12,7 +12,7 @@ visibility: unlisted
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](..\images\StatisticalSignificance\Cover.png)  
+<!-- ![alt](..\images\StatisticalSignificance\Cover.png)   -->
 
 First things first. Yes, as is evident from the cover for the article, matplotlib now supports an **xkcd** mode, with 'sketched' graphs and figures. The **Humor Sans** font can be used to complete the effect.  
 
