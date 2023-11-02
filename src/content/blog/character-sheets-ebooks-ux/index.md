@@ -12,7 +12,8 @@ visibility: private
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->
-![alt](../images/CharacterSheets/Cover_2.png)  
+<!-- TODO: Add this image -->
+<!-- ![alt](../images/CharacterSheets/Cover_2.png)   -->
 
 This post is a draft, watch this space for updates. 
 I shall be updating this post with advantages, usecases, and all the data collected from user interviews. 
