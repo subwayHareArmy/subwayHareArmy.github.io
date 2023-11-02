@@ -87,7 +87,8 @@ This results in a p-value of **<>**
 We can now choose a suitable significance level to reject our null hypothesis **:D**.   
 
 
-![alt]({filename}../images/StatisticalSignificance/correlation_xkcd.png)  
+<!-- ![alt]({filename}../images/StatisticalSignificance/correlation_xkcd.png)   -->
+
 Let it be **<0.5>**, thus our p-value is less than our significance level and hence we reject the null hypothesis.  
 <br/>
 The hypothesis H1 is statistically significant.  
