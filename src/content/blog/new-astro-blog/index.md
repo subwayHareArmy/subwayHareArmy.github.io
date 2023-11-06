@@ -32,3 +32,5 @@ Some decisions:
 - Content written in markdown 
 - Astro transitions makes transition animations easy
 - Sass for CSS
+- Plan to move from Markdown to MDX
+- Will add an SEO plugin like this one: https://github.com/jonasmerlin/astro-seo#readme

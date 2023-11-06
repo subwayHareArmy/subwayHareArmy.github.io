@@ -25,12 +25,13 @@ const { title, description, includeFooter, padTop, padBottom, ogImage, ogAlt } =
   Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const pageTitle = Astro.url.pathname === "/" ? title : `${title} · Eva Decker`;
+const pageTitle = Astro.url.pathname === "/" ? title : `${title} · Ayush Yembarwar`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- TODO: Add SEO plugin like this one: https://github.com/jonasmerlin/astro-seo#readme -->
     <GoogleAnalytics />
     <meta charset="UTF-8" />
     <meta name="generator" content={Astro.generator} />
