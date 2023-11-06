@@ -14,11 +14,23 @@ visibility: public
 WIP article.
 <!-- TODO: WIP article. -->
 
-Pelican is a great open source Static Site Generator (SSG) for Python. It provides support for themes and templates with many people offering theirs for use by others. The ability to write content in Markdown and have fast rebuild times while writing the content out to the pages was what drew me in. The plugin ecosystem was a major draw as well. However, people have moved away from it in favour of modern frameworks with more extensibility and active users.
+<br>
+
+Pelican is a great open source Static Site Generator (SSG) for Python. It provides support for themes and templates with many people offering theirs for use by others. The ability to write content in Markdown and have fast rebuild times while writing the content out to the pages was what drew me in. The plugin ecosystem was a major draw as well. 
+
+<br>
+
+However, people have moved away from it in favour of modern frameworks with more extensibility and active users.
+
+<br>
 
 One such framework is Astro. I can use Astro as an SSG, using the popular JS frameworks like React, Vue, Svelte, even multiple ones at the same time. 
 
+<br>
+
 Astro ships the smallest amount of JS, it introduces the idea of partial hydration through the use of interactive islands in a sea of non-interactivity. With directives you can choose when to ship JS to each component.
+
+<br>
 
 Some decisions:
 - Using React, or Vue
