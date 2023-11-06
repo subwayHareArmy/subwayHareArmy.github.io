@@ -60,7 +60,7 @@ export const collections = {
         url: z.string().optional(),
         visibility: z.enum(["private", "unlisted", "public"]),
         // // TODO: Write about this visibility strategy (similar to Youtube) in the readme or somewhere
-        // TODO: Add a field for authors as well, apparently that helps with SEO
+        //// TODO: Add a field for authors as well, apparently that helps with SEO
       })
   })
 };

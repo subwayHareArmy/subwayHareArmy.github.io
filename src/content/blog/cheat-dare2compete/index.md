@@ -3,16 +3,13 @@ title: Cheat Dare2Compete - Host events as an individual
 description: temp
 datePublished: 2020-05-05 22:16:00+05:30
 dateModified: 2020-05-05 22:16:00+05:30
-# img: ["./daancorona_progress.png"]
-# imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
+img: ["./BuzzFloss.png"]
+imgAlt: An image of the logo of BuzzFloss, a made-up quizzing organisation.
 # ogImage: ./daancorona_progress.png
 # TODO: Find and add a hero image here
 tags: ["dare2compete", "quizzing"]
 visibility: public
 ---
-
-<!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](./BuzzFloss.png)  
 
 <br>
 

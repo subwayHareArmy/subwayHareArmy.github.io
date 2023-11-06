@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import dayjs from "dayjs";
+
+import Center from "../../components/Center.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import ProjectPreview from "../../components/ProjectPreview.astro";
+import SubscribeCallout from "../../components/Subscribe/SubscribeCallout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Crossword";
+const description = "making one is not therapeutic";
+---
+
+<BaseLayout title={title} description={description} includeFooter padBottom>
+  <PageHeader title={title} description={description} slug="projects" />
+  <Center>
+    <iframe style="height: 90vh; width: 100%;" src="https://crosshare.org/embed/lPpPVIoxdCffCAP9KO3E/y3k4tX3ThwWsjHVJ4wvGz7lzLX53" frameborder="0" allowfullscreen="true" allowtransparency="true" allow="clipboard-write *"></iframe>
+  </Center>
+</BaseLayout>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding-block-end: 4em;
+  }
+</style>

@@ -3,18 +3,13 @@ title: Interviewing Erin McKean
 description: temp
 datePublished: 2020-04-28 22:16:00+05:30
 dateModified: 2020-04-28 22:16:00+05:30
-# img: ["./daancorona_progress.png"]
-# imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
+img: ["./2.png"]
+imgAlt: A photo of Eric McKean, a lexicographer of whom this interview was taken.
 # ogImage: ./daancorona_progress.png
 # TODO: Find and add a hero image here
 tags: ["lexicography", "murphy's law", "interview"]
 visibility: public
 ---
-
-<!-- PELICAN_BEGIN_SUMMARY -->
-![alt](./2.png)  
-
-<!-- PELICAN_END_SUMMARY -->
 
 <br>
 

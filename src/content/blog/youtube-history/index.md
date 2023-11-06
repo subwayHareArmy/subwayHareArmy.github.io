@@ -1,28 +1,22 @@
 ---
-title: That's enough ~~internet~~ YouTube for today
+title: That's enough ~internet~ YouTube for today
 description: temp
 datePublished: 2020-04-15 22:16:00+05:30
 dateModified: 2020-04-15 22:16:00+05:30
-# img: ["./daancorona_progress.png"]
-# imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
+img: ["./temporary_red.png"]
+imgAlt: An article header image, illustrating the amount of time spent on YouTube.
 # ogImage: ./daancorona_progress.png
 # TODO: Find and add a hero image here
 tags: ["scraping", "youtube", "analysis"]
 visibility: public
 ---
 
-<!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](./temporary_red.png)  
-
-<br>
-
-If you find that the lower limit of your YouTube usage translates to ~1.5% of your life, you'd say, "That's enough YouTube for today," as well. This is probably why YouTube offers no easy way of downloading your history. I scraped for my history through my cookies, but it can downloaded via Google's Takeout service as well.
+If you find that even the lower-end estimate of your YouTube usage translates to ~1.5% of your life, you'd say, "that's enough YouTube for today," as well. This is probably why YouTube offers no easy way of downloading your history. I scraped for my history through my cookies, but it can downloaded via Google's Takeout service as well.
 <!-- PELICAN_END_SUMMARY -->
 
 <br>
 
-Scraping YouTube History
-========== 
+## Scraping YouTube History
 
 <br>
 
@@ -30,8 +24,7 @@ While there are multiple methods to do this, I scraped the data by using YouTube
 
 <br>
 
-Analysis
-==========
+## Analysis
 
 <br>
 

@@ -3,16 +3,13 @@ title: Appreciation for DaanCorona!
 description: temp
 datePublished: 2020-07-01 22:16:00+05:30
 dateModified: 2020-07-01 22:16:00+05:30
-# img: ["./daancorona_progress.png"]
-# imgAlt: A photo describing the revenue progress of the social venture startup, DaanCorona.
+img: ["./DAANCORONA_LOGO.png"]
+imgAlt: A photo of the logo of the social venture startup, DaanCorona.
 # ogImage: ./daancorona_progress.png
 # TODO: Find and add a hero image here
 tags: ["daancorona", "social venture"]
 visibility: public
 ---
-
-<!-- PELICAN_BEGIN_SUMMARY -->  
-![alt](./DAANCORONA_LOGO.png)
 
 <br>
 
